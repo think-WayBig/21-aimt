@@ -15,7 +15,9 @@ try {
             useNewUrlParser: true,
             useUnifiedTopology: true
         }
-    );
+    ).then(() => {
+        console.log("mongodb connection established");
+    });
 } catch (err) {
     console.log(err)
 }
@@ -24,6 +26,36 @@ app.get('/', (req, res) => {
     res.send({
         message: "Welcome"
     });
+});
+
+const Auth = require('./models/auth');
+app.post('/newUser', async (req, res) => {
+    try {
+        let auth = new Auth({
+            Name: req.body.Name,
+            Mail: req.body.Mail,
+            Password: req.body.Password,
+        });
+
+        await auth.save();
+
+        console.log("Data sent successfully")
+
+        res.status(202).send({
+            message: "Data sent successfully",
+            data: auth
+        })
+    } catch (error) {
+        res.status(202).send({
+            message: "Failed",
+            error: error,
+            data: {
+                Name: req.body.Name,
+                Mail: req.body.Mail,
+                Password: req.body.Password,
+            }
+        })
+    }
 });
 
 let PORT = 5000;
