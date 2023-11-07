@@ -58,5 +58,19 @@ app.post('/newUser', async (req, res) => {
     }
 });
 
+app.get('/user', async (req, res) => {
+    try {
+        let data = await Auth.findOne({ Mail: req.body.Mail });
+        res.json({
+            data: data
+        })
+    } catch (error) {
+        res.status(202).send({
+            message: "Failed",
+            error: error.message,
+        })
+    }
+})
+
 let PORT = 5000;
 app.listen(PORT, () => { console.log('API Running Successfully', `http://localhost:${PORT}`) });
