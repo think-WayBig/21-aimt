@@ -917,29 +917,83 @@
 			</div> <!-- /.opacity -->
 		</div> <!-- /.inner-page-banner -->
 
-		<style>
-			.gallery img {
-				width: 600px;
-				border: 10px solid #fefae0;
-				transition-duration: 1s;
-				height: 280px;
-			}
+	<style>
+		.gallery img {
+			width: 600px;
+			border: 10px solid #fefae0;
+			transition-duration: 1s;
+			height: 280px;
+		}
 
-			.gallery img:hover {
-				-webkit-transform: scale(1.1);
-				-ms-transform: scale(1.1);
-				transform: scale(1.1);
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		.gallery-item {
+			position: relative;
+			margin: 20px;
+			overflow: hidden;
+			max-width: 600px; /* Adjust the maximum width as needed */
+			text-align: center; /* Center the content */
+		}
+		
+		.gallery img:hover {
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+		
+		.text-below {
+			background-color: rgba(255, 69, 0, 0.7); /* Orange-Red with some transparency */
+			color: black;
+			padding: 20px;
+			font-size: 16px;
+			text-align: left;
+		}
+		
+		.gallery-item:hover .text-below,
+		.gallery-item.active .text-below {
+			opacity: 1; /* Show on hover or when active */
+		}
+		
+		.gallery-heading {
+			text-align: center;
+			font-size: 50px;
+			margin-bottom: 20px;
+		}
+		
+		.affiliation{
+			font-size: 25px;
+			text-align: center;
+		}
+		
+		@media (max-width: 768px) {
+			.gallery-item {
+				width: 100%; /* Full width on smaller screens */
 			}
-
-			.gallery {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-				justify-content: center;
-				align-items: center;
-				margin-bottom: 50px;
+			.gallery-item img {
+				width: 100%; /* Make images responsive */
+				height: auto;
+				display: block;
 			}
-		</style>
+			.gallery-heading{
+				font-size: 30px;
+			}
+			.affiliation{
+				font-size: 20px;
+			}
+		}
+		
+	</style>
 
 		<!-- Page Breadcrum __________________________ -->
 		<section class="page-breadcrum">
@@ -953,9 +1007,8 @@
 					<div class="gallery">
 						<div class="gallery-item" data-text="Image 1">
 							<img src="images/affiliation-1.1.png" alt="">
-							<div class="text-below">It is providing system certification according to ISO 9001: 2008, ISO 14001: 2004, ISO 22000: 2005, OHSAS 18001: 2007 in India & Abroad.   QA Certification Services is having direct accreditation with DAC (Dubai Accreditation Centre, Dubai) for QMS certification. As an experienced certification body, QA Certification Services is authorized to assess quality standards. QA Certification Services has assisted various organizations in diverse sectors for enhancing and developing an effective management system that serves as solid foundation, enabling them to compete in increasingly complex business environment. Today, QA Certification Services is recognized as the global leader in the field of certification services.</div>
+							<div class="text-below">It is providing system certification according to ISO 9001: 2008, ISO 14001: 2004, ISO 22000: 2005, OHSAS 18001: 2007 in India & Abroad. QA Certification Services is having direct accreditation with DAC (Dubai Accreditation Centre, Dubai) for QMS certification. As an experienced certification body, QA Certification Services is authorized to assess quality standards. QA Certification Services has assisted various organizations in diverse sectors for enhancing and developing an effective management system that serves as solid foundation, enabling them to compete in increasingly complex business environment. Today, QA Certification Services is recognized as the global leader in the field of certification services.</div>
 						</div>
-						
 					</div>
 				</div>
 					<h2 class="affiliation">2) DAC:</h2>
