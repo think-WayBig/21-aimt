@@ -921,23 +921,42 @@
 			</div> <!-- /.container -->
 		</div>
 
+		<style>
+			.commonBtn {
+				background-color: rgb(255, 56, 56);
+				color: white;
+				padding: 8px 60px;
+				width: 200px;
+				zoom: 0.9;
+				font-size: 15px;
+				border: none;
+			}
+
+			.commonBtn:hover {
+				background-color: rgb(223, 16, 16);
+			}
+		</style>
+
 		<div data-elementor-type="wp-page" data-elementor-id="27" class="elementor elementor-27"
 			style="margin-bottom: 50px;">
 			<div class="custom_content custom" bis_skin_checked="1">
 				<div class="container" bis_skin_checked="1">
-					<div class="row" style="background-color: #D6D6D6;" bis_skin_checked="1">
-						<div id="ContentPlaceHolder1_pnluploadDocument" bis_skin_checked="1">
+					<div class="row" style="background-color: #D6D6D6;padding-bottom: 30px;" bis_skin_checked="1">
+						<div style="display: flex;flex-direction: column;justify-content: center;"
+							id="ContentPlaceHolder1_pnluploadDocument" bis_skin_checked="1">
 							<div class="col-md-12 text-center" style="padding: 15px;" bis_skin_checked="1">
 								<br>
-								<h3>Upload Documents</h3>
+								<h3 style="font-size: 25px;">Upload Documents</h3>
 							</div>
-							<div class="col-md-10 col-md-offset-1" bis_skin_checked="1">
-								<div class="col-md-3" bis_skin_checked="1">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-		
-										<select name="ctl00$ContentPlaceHolder1$ddldocuments" id="ContentPlaceHolder1_ddldocuments" class="form-control">
-											<option selected="selected" value="Select Document Type">Select Document Type</option>
-											<option value="1">10Th Certificate</option>
+										<h3 style="text-align: left;">10Th Certificate <span style="color: red;font-size: 30px;">*</span></h3>
+										<!-- <select name="ctl00$ContentPlaceHolder1$ddldocuments"
+											id="ContentPlaceHolder1_ddldocuments" class="form-control">
+											<option value="1"></option>
 											<option value="2">12Th Certificate</option>
 											<option value="3">Applicant Photo</option>
 											<option value="4">Identi-proof</option>
@@ -945,23 +964,28 @@
 											<option value="6">Degree</option>
 											<option value="7">Applicant Signature</option>
 											<option value="8">Diploma</option>
-										</select>
+										</select> -->
 									</div>
 								</div>
-								<div class="col-md-5" bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
 									<div class="input-group image-preview" bis_skin_checked="1">
-										<input type="text" class="form-control image-preview-filename" disabled="disabled">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
 										<!-- don't give a name === doesn't send on POST/GET -->
 										<span class="input-group-btn">
 											<!-- image-preview-clear button -->
-											<button type="button" class="btn btn-default image-preview-clear" style="display: none;">
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
 												<span class="glyphicon glyphicon-remove"></span>Clear
 											</button>
 											<!-- image-preview-input -->
-											<div class="btn btn-default image-preview-input" id="browse-btn" bis_skin_checked="1">
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn" bis_skin_checked="1">
 												<span class="glyphicon glyphicon-folder-open"></span>
-												<span class="image-preview-input-title">Browse</span>
-												<input style="display: none;" name="ctl00$ContentPlaceHolder1$fileuplod" type="file" id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
 												<!-- rename it -->
 											</div>
 										</span>
@@ -973,21 +997,321 @@
 										</script>
 									</div>
 								</div>
-								<div class="col-md-3 text-center   " bis_skin_checked="1">
-									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload" id="ContentPlaceHolder1_btnUpload" class="commonBtn" style="width:200px;">
-								</div>
-								<br>
-								<div class="col-md-12" bis_skin_checked="1">
-									<div class="table-responsive" bis_skin_checked="1">
-										<br>
-										<table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">		
-										</table>
-									</div>
-									<div class="col-md-offset-9 col-md-3 text-center " bis_skin_checked="1">
-									</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn1" class="commonBtn">
 								</div>
 							</div>
-						</div>	
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">12Th Certificate <span style="color: red;font-size: 30px;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn2" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn2 = document.getElementById("browse-btn2");
+											browseBtn2.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn2" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Applicant Photo <span style="color: red;font-size: 30px;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn3" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn3 = document.getElementById("browse-btn3");
+											browseBtn3.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn3" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Identity-proof <span style="color: red;font-size: 30px;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn4" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn4 = document.getElementById("browse-btn4");
+											browseBtn4.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn4" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Address Proof <span style="color: red;font-size: 30px;visibility: hidden;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn5" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn5 = document.getElementById("browse-btn5");
+											browseBtn5.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn5" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Degree <span style="color: red;font-size: 30px;visibility: hidden;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn6" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn6 = document.getElementById("browse-btn6");
+											browseBtn6.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn6" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Applicant Signature <span style="color: red;font-size: 30px;visibility: hidden;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn7" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn7 = document.getElementById("browse-btn7");
+											browseBtn7.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn7" class="commonBtn">
+								</div>
+							</div>
+							<hr style="margin-top: 15px;border: 2px solid rgb(234, 234, 234);">
+							<!-- Component starts here -->
+							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;"
+								bis_skin_checked="1">
+								<div style="margin-top: 10px;" class="col-md-3" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<h3 style="text-align: left;">Diploma <span style="color: red;font-size: 30px;visibility: hidden;">*</span></h3>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-5" bis_skin_checked="1">
+									<div class="input-group image-preview" bis_skin_checked="1">
+										<input type="text" class="form-control image-preview-filename"
+											disabled="disabled">
+										<!-- don't give a name === doesn't send on POST/GET -->
+										<span class="input-group-btn">
+											<!-- image-preview-clear button -->
+											<button type="button" class="btn btn-default image-preview-clear"
+												style="display: none;">
+												<span class="glyphicon glyphicon-remove"></span>Clear
+											</button>
+											<!-- image-preview-input -->
+											<div style="transition: 0.5s;" class="btn btn-default image-preview-input"
+												id="browse-btn8" bis_skin_checked="1">
+												<span class="glyphicon glyphicon-folder-open"></span>
+												<span class="image-preview-input-title">&nbsp;&nbsp;Browse</span>
+												<input style="display: none;transition: 0.3s;"
+													name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
+													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8">
+												<!-- rename it -->
+											</div>
+										</span>
+										<script>
+											let browseBtn8 = document.getElementById("browse-btn8");
+											browseBtn8.addEventListener("click", () => {
+												document.getElementById("ContentPlaceHolder1_fileuplod").click();
+											})
+										</script>
+									</div>
+								</div>
+								<div style="margin-top: 10px;" class="col-md-3 text-center   " bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
+										id="uploadBtn8" class="commonBtn">
+								</div>
+							</div>
+							<input style="margin: auto; margin-top: 50px;zoom: 1.1;" type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Submit" id="uploadBtn8" class="commonBtn">
+						</div>
 					</div>
 				</div>
 			</div>
