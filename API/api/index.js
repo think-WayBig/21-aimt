@@ -72,5 +72,55 @@ app.get('/user', async (req, res) => {
     }
 })
 
+const Admission = require('./models/admission');
+app.post('/newAdmission', async (req, res) => {
+    try {
+        let admission = new Admission({
+            Name: req.body.Name,
+            Gender: req.body.Gender,
+            Course: req.body.Course,
+            Specialization: req.body.Specialization,
+            Category: req.body.Category,
+            Fname: req.body.Fname,
+            Mname: req.body.Mname,
+            Dob: req.body.Dob,
+            Address: req.body.Address,
+            Phone: req.body.Phone,
+            Email: req.body.Email,
+            Country: req.body.Country,
+            State: req.body.State,
+            Mschool: req.body.Mschool,
+            Myear: req.body.Myear,
+            Mpercent: req.body.Mpercent,
+            Dcollege: req.body.Dcollege,
+            Dyear: req.body.Dyear,
+            Dpercent: req.body.Dpercent,
+            Hschool: req.body.Hschool,
+            Hyear: req.body.Hyear,
+            Hpercent: req.body.Hpercent,
+            Gcollege: req.body.Gcollege,
+            Gyear: req.body.Gyear,
+            Gpercent: req.body.Gpercent,
+        });
+
+        await admission.save();
+
+        console.log("Data sent successfully")
+
+        res.status(202).send({
+            message: "Data sent successfully",
+            data: admission
+        })
+    } catch (error) {
+        res.status(202).send({
+            message: "Failed",
+            error: error,
+            data: {
+                
+            }
+        })
+    }
+});
+
 let PORT = 5000;
 app.listen(PORT, () => { console.log('API Running Successfully', `http://localhost:${PORT}`) });
