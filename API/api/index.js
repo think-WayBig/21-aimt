@@ -31,6 +31,18 @@ app.get('/', (req, res) => {
 const Auth = require('./models/auth');
 app.post('/newUser', async (req, res) => {
     try {
+        // Check if the email already exists
+        const existingUser = await Auth.findOne({ Mail: req.body.Mail });
+
+        if (existingUser) {
+            // Email already exists, send a response indicating the conflict
+            return res.status(409).send({
+                message: "Email already exists",
+                data: existingUser
+            });
+        }
+
+        // Email does not exist, create and save a new user
         let auth = new Auth({
             Name: req.body.Name,
             Mail: req.body.Mail,
@@ -39,22 +51,23 @@ app.post('/newUser', async (req, res) => {
 
         await auth.save();
 
-        console.log("Data sent successfully")
+        console.log("Data sent successfully");
 
         res.status(202).send({
             message: "Data sent successfully",
             data: auth
-        })
+        });
     } catch (error) {
-        res.status(202).send({
+        // Handle other errors
+        res.status(500).send({
             message: "Failed",
-            error: error,
+            error: error.message,
             data: {
                 Name: req.body.Name,
                 Mail: req.body.Mail,
                 Password: req.body.Password,
             }
-        })
+        });
     }
 });
 
@@ -116,9 +129,48 @@ app.post('/newAdmission', async (req, res) => {
             message: "Failed",
             error: error,
             data: {
-                
+
             }
         })
+    }
+});
+const sendGridMail = require('@sendgrid/mail');
+sendGridMail.setApiKey("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");
+
+app.post('/sendMail', async (req, res) => {
+    const msg = {
+        to: req.body.Mail,
+        from: 'rkinfotechasr@gmail.com',
+        subject: 'Verify your email',
+        html: `<div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
+        <div style="margin:50px auto;width:70%;padding:20px 0">
+          <div style="border-bottom:1px solid #eee">
+            <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">Affinity Institute of Management and Technology</a>
+          </div>
+          <p style="font-size:1.1em">Hi,</p>
+          <p>Thank you for choosing Affinity Institute of Management and Technology. Use the following OTP to complete your Sign Up procedures. OTP is valid for 5 minutes</p>
+          <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">${req.body.otp}</h2>
+          <p style="font-size:0.9em;">Regards,<br />Affinity Institute of Management and Technology</p>
+          <hr style="border:none;border-top:1px solid #eee" />
+          <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
+            <p>Affinity Intitute of Management and Technology</p>
+            Visit <a href="https://aimt.net.in">https://aimt.net.in</a>
+            <p>India</p>
+          </div>
+        </div>
+      </div>`
+    };
+
+    try {
+        await sendGridMail.send(msg);
+        res.json({
+            message: "Email sent Successfully!!"
+        });
+    } catch (error) {
+        res.json({
+            message: "Error",
+            error: error
+        });
     }
 });
 

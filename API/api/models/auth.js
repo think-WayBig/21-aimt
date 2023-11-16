@@ -4,11 +4,11 @@ const auth = new mongoose.Schema({
     Name: {
         type: String,
         required: true,
-        unique: true
     },
     Mail: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     Password: {
         type: String,
