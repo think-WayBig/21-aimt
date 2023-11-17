@@ -804,7 +804,9 @@ header.inner-header .top-header div.right-side>ul>li a:hover{
 	cursor:pointer;
     color: #333333;
     background-color: #fff;
-	padding:15px 20px;
+	padding: 15px 0;
+	padding-right: 28px;
+	padding-left: 25px;
 }
 .tutor-course-filter-nested-terms:last-child,
 .av-widget label:last-child,
