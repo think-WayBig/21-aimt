@@ -756,8 +756,20 @@
         <!-- Header _________________________________ -->
         <header class="inner-header">
 
-            <div class="top-header">
-                <div style="padding: 5px 0;" class="container">
+            <style>
+                @media (max-width: 450px) {
+                    .custom-ul {
+                        display: none;
+                    }
+
+                    .custom-ul2 {
+                        padding: 11px!important;
+                    }
+                }
+            </style>
+
+            <div class="custom-ul2 top-header">
+                <div style="padding: 5px 0;" class="custom-ul container">
                     <div class="left-side float-left">
                         <ul>
                             <li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a
@@ -770,8 +782,20 @@
                         </ul>
                     </div> <!-- /.left-side -->
 
+                    <style>
+                        .custom-con3 {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        @media (max-width: 1000px) {
+                            .custom-con3 {
+                                display: none;
+                            }
+                        }
+                    </style>
+
                     <!--Info Box-->
-                    <div class="right-side float-right" style="margin: auto;">
+                    <div class="right-side float-right custom-con3">
                         <div style="padding: 10px 30px;background-color: white;width: 250px;display: flex;justify-content: center;">
                             <a href="./verification/"><i style="position: relative;top: 2px;"
                                     class="fi fi-rr-document"></i>&nbsp; Document Verification</a>
