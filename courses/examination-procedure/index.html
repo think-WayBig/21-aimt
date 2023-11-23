@@ -764,154 +764,219 @@
         <!-- Header _________________________________ -->
         <header class="inner-header">
 
-            <div class="top-header">
-				<div class="container">
-					<div class="left-side float-left">
-						<ul>
-							<li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a
-									href="javascript:void(0);" class="tran3s">Not Decided Yet</a>
-							</li>
-							<li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a
-									href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a></li>
-							<li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a
-									href="Tel:+91 12345-67890" class="tran3s">+91 12345-67890</a></li>
-						</ul>
-					</div> <!-- /.left-side -->
+            <style>
+                @media (max-width: 450px) {
+                    .custom-ul {
+                        display: none;
+                    }
 
-					<!--Info Box-->
-					<div class="right-side float-right">
-						<ul>
-							<li><a class="tran3s round-border icon" target="_blank" href="https://www.facebook.com/"
-									style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
-										class="fa fa-facebook"></span></a></li>
-							<li><a class="tran3s round-border icon" target="_blank" href="https://www.googleplus.com/"
-									style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
-										class="fa fa-instagram"></span></a></li>
-							<li><a class="tran3s round-border icon" target="_blank" href="https://www.linkedin.com/"
-									style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
-										class="fa fa-linkedin"></span></a></li>
-							<li><a class="tran3s round-border icon" target="_blank" href="https://www.twitter.com/"
-									style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
-										class="fa fa-twitter"></span></a></li>
-						</ul>
-					</div>
+                    .custom-ul2 {
+                        padding: 11px !important;
+                    }
+                }
+            </style>
 
-				</div>
-			</div> <!-- /.top-header -->
+            <div class="custom-ul2 top-header">
+                <div style="padding: 5px 0;" class="custom-ul container">
+                    <div class="left-side float-left">
+                        <ul>
+                            <li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a
+                                    href="javascript:void(0);" class="tran3s">Not Decided Yet</a>
+                            </li>
+                            <li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a
+                                    href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a></li>
+                            <li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a
+                                    href="Tel:+91 12345-67890" class="tran3s">+91 12345-67890</a></li>
+                        </ul>
+                    </div> <!-- /.left-side -->
 
-			<!-- _______________________ Theme Menu _____________________ -->
+                    <style>
+                        .custom-con3 {
+                            display: flex;
+                            justify-content: center;
+                        }
 
-			<div class="container">
-				<div class="main-menu-wrapper clear-fix">
-					<div class="container">
-						<div class="logo float-left">
-							<a href="./index.html" title="AIMT"><img src="images/logo.png" alt="logo"></a>
-						</div>
+                        @media (max-width: 1000px) {
+                            .custom-con3 {
+                                display: none;
+                            }
+                        }
+                    </style>
 
-						<!-- <form action="./index.html" class="float-right" method="get">
+                    <!--Info Box-->
+                    <div class="right-side float-right custom-con3">
+                        <div
+                            style="padding: 10px 30px;background-color: white;width: 250px;display: flex;justify-content: center;">
+                            <a href="../verification/"><i style="position: relative;top: 2px;"
+                                    class="fi fi-rr-document"></i>&nbsp; Document Verification</a>
+                        </div>
+                        <!-- <ul>
+                            <li><a class="tran3s round-border icon" target="_blank" href="https://www.facebook.com/"
+                                    style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
+                                        class="fa fa-facebook"></span></a></li>
+                            <li><a class="tran3s round-border icon" target="_blank" href="https://www.googleplus.com/"
+                                    style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
+                                        class="fa fa-instagram"></span></a></li>
+                            <li><a class="tran3s round-border icon" target="_blank" href="https://www.linkedin.com/"
+                                    style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
+                                        class="fa fa-linkedin"></span></a></li>
+                            <li><a class="tran3s round-border icon" target="_blank" href="https://www.twitter.com/"
+                                    style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
+                                        class="fa fa-twitter"></span></a></li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div> <!-- /.top-header -->
+
+            <!-- _______________________ Theme Menu _____________________ -->
+
+            <div class="container">
+                <div class="main-menu-wrapper clear-fix">
+                    <div class="container">
+                        <div class="logo float-left">
+                            <a href="./index.html" title="AIMT"><img src="images/logo2.png" alt="logo"></a>
+                        </div>
+
+                        <!-- <form action="./index.html" class="float-right" method="get">
                             <input type="text" name="s" placeholder="Search">
                             <button><i class="fa fa-search" aria-hidden="true"></i></button>
                         </form> -->
 
 
-						<!-- Menu -->
-						<nav class="navbar float-right">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-									data-target="#navbar-collapse-1" aria-expanded="false">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <!-- Menu -->
+                        <nav class="navbar float-right">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li id="menu-item-58"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
-                                        <a title="Home" href="../index.html" data-toggle="dropdown1"
+                                        <a title="Home" href="../../index.html" data-toggle="dropdown1"
                                             class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
                                             data-options="easing: easeOutQuart">Home</a>
                                     </li>
                                     <li id="menu-item-79"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
-                                    <a title="Features" href="../about" data-toggle="dropdown1"
-                                        class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-                                        data-options="easing: easeOutQuart">About</a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li id="menu-item-74"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-                                            <a title="Our Teacher" href="../Who-We-Are">Who We Are</a>
-                                        </li>
-                                        <li id="menu-item-75"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-                                            <a title="Teacher Profile" href="../Our-Mission">Our Mission</a>
-                                        </li>
-                                        <li id="menu-item-71"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                            <a title="Faqs" href="../Our-Vision">Our Vision</a>
-                                        </li>
-                                        <li id="menu-item-72"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                            <a title="Faqs" href="../Chairman-Message">Chairman Message</a>
-                                        </li>
-                                    </ul>
-                                </li>
-									<li id="menu-item-76"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
-										<a title="Features" href="../courses/" data-toggle="dropdown1"
-											class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-											data-options="easing: easeOutQuart">Courses</a>
-										<ul role="menu" class="sub-menu">
-											<li id="menu-item-82"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-												<a title="Our Teacher" href="../courses/">Technical</a>
-											</li>
-											<li id="menu-item-83"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-												<a title="Teacher Profile" href="../courses/">Management</a>
-											</li>
-											<li id="menu-item-84"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-												<a title="Faqs" href="../courses/">Computer Programme</a>
-											</li>
-											<li id="menu-item-86"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-												<a title="Faqs" href="../courses/">Examination Procedure</a>
-											</li>
-										</ul>
-									</li>
-									<li id="menu-item-65"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-												title="Gallery" href="../gallery/" class="hvr-underline-from-left1"
-												data-scroll="" data-options="easing: easeOutQuart">Gallery</a></li>
-									<li id="menu-item-66"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-										title="Contact" href="../contact/" class="hvr-underline-from-left1"
-										data-scroll="" data-options="easing: easeOutQuart">Contact</a></li>
-									<li id="menu-item-67"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-										title="Affiliation" href="../affiliation/" class="hvr-underline-from-left1"
-										data-scroll="" data-options="easing: easeOutQuart">Affiliation</a></li>
-									<li id="menu-item-68"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-										title="Verification" href="../verification/" class="hvr-underline-from-left1"
-										data-scroll="" data-options="easing: easeOutQuart">Document Verification</a></li>
-									<li id="menu-item-69"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-												title="Results" href="../results/" class="hvr-underline-from-left1"
-												data-scroll="" data-options="easing: easeOutQuart">Results</a></li>
-									<li id="menu-item-70"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-												title="Enroll Now" href="../signup/" class="hvr-underline-from-left1"
-												data-scroll="" data-options="easing: easeOutQuart">Enroll Now</a></li>
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+                                        <a title="About" href="../../about" data-toggle="dropdown1"
+                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+                                            data-options="easing: easeOutQuart">About</a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li id="menu-item-74"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+                                                <a title="Who We Are" href="../../Who-We-Are">Who We Are</a>
+                                            </li>
+                                            <li id="menu-item-75"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+                                                <a title="Our Mission" href="../../Our-Mission">Our Mission</a>
+                                            </li>
+                                            <li id="menu-item-71"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="Our Vision" href="../../Our-Vision">Our Vision</a>
+                                            </li>
+                                            <li id="menu-item-72"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="Chairman Message" href="../../Chairman-Message">Chairman Message</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-76"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+                                        <a title="Courses" href="../courses/technical/" data-toggle="dropdown1"
+                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+                                            data-options="easing: easeOutQuart">Courses</a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li id="menu-item-82"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+                                                <a title="Technical" href="../technical/">Technical</a>
+                                            </li>
+                                            <li id="menu-item-83"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+                                                <a title="Management" href="../management/">Management</a>
+                                            </li>
+                                            <li id="menu-item-84"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="Computer Programme" href="../computer-programme/">Computer Programme</a>
+                                            </li>
+                                            <li id="menu-item-86"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="Examination Procedure" href="../examination-procedure/">Examination Procedure</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-65"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+                                            title="Gallery" href="../../gallery/" class="hvr-underline-from-left1"
+                                            data-scroll="" data-options="easing: easeOutQuart">Gallery</a></li>
+                                    <li id="menu-item-66"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+                                            title="Contact" href="../../contact/" class="hvr-underline-from-left1"
+                                            data-scroll="" data-options="easing: easeOutQuart">Contact Us</a></li>
+                                    <li id="menu-item-69"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+                                            title="Enrollment" href="../../enrollment/" class="hvr-underline-from-left1"
+                                            data-scroll="" data-options="easing: easeOutQuart">Enrollment</a></li>
+                                    <li id="menu-item-68"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+                                            title="Results" href="../../results/" class="hvr-underline-from-left1"
+                                            data-scroll="" data-options="easing: easeOutQuart">Results</a></li>
+                                    <li id="menu-item-85"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+                                        <a title="Affiliation" href="../../QA&Dubai-Accreditation/" data-toggle="dropdown1"
+                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+                                            data-options="easing: easeOutQuart">Affiliation</a>
+                                        <ul role="menu" style="left: -150px;width: 350px;" class="sub-menu">
+                                            <li id="menu-item-90"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+                                                <a title="QA & Dubai-Accreditation" href="../../QA&Dubai-Accreditation/">QA &
+                                                    Dubai-Accreditation</a>
+                                            </li>
+                                            <li id="menu-item-87"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+                                                <a title="Joint Accreditation Services" href="../../Joint-Accreditation-Services/">Joint Accreditation
+                                                    Services</a>
+                                            </li>
+                                            <li id="menu-item-88"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="International Accreditation Form" href="../../International-Accreditation-Form/">International Accreditation
+                                                    Form</a>
+                                            </li>
+                                            <li id="menu-item-93"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="Elite Norsk Akreditering" href="../../Elite&Norsk-Akreditering/">Elite Norsk Akreditering</a>
+                                            </li>
+                                            <li id="menu-item-89"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="National Council for accreditation and Assessment" href="../../National-Council-for-Accreditation-and-Assessment/">National Council for Accreditation and Assessment</a>
+                                            </li>
+                                            <li id="menu-item-92"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="National Council of Distance Education" href="../../National-Council-of-Distance-Education/">National Council of Distance Education</a>
+                                            </li>
+                                            <li id="menu-item-91"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                                <a title="National Council of Technical Education" href="../../National-Council of-Technical-Education/">National Council of Technical Education</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-70"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+                                            title="Apply Now" href="../../signup/" class="hvr-underline-from-left1"
+                                            data-scroll="" data-options="easing: easeOutQuart">Apply Now</a></li>
                                 </ul>
                             </div>
-						</nav>
-					</div>
-				</div>
-			</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- Page Title -->
@@ -960,18 +1025,49 @@
 
                                 <div class="main-post-content">
 
-                                    <p>Distance and eLearning education simply means imparting education from a distance wherein the teacher and the student are physically separated. The medium of instruction is English comprehensive course content. Comprehensive course content will be supplied to all the students. Students enrolled with different programs will receive complete study material in 30 days of payment of fee. The material supplied will cover the syllabi of the course. Those who wish to take further help can access the library, internet and other sources to widen their knowledge as well as to solve the case studies.</p>
+                                    <p>Distance and eLearning education simply means imparting education from a distance
+                                        wherein the teacher and the student are physically separated. The medium of
+                                        instruction is English comprehensive course content. Comprehensive course
+                                        content will be supplied to all the students. Students enrolled with different
+                                        programs will receive complete study material in 30 days of payment of fee. The
+                                        material supplied will cover the syllabi of the course. Those who wish to take
+                                        further help can access the library, internet and other sources to widen their
+                                        knowledge as well as to solve the case studies.</p>
                                     <div class="post-middle-list">
                                         <h4>Assignments :</h4><br>
-                                        <p>Assignments are an integral part of the education. The study material supplied will also contain assignments to be submitted by the students to evaluate their performance by the local counselors.</p>
+                                        <p>Assignments are an integral part of the education. The study material
+                                            supplied will also contain assignments to be submitted by the students to
+                                            evaluate their performance by the local counselors.</p>
                                         <h4>Doubt Clearance :</h4><br>
-                                        <p>Local counselors will be available during office hours to assist in clearing study related doubts of the student. Students can also seek doubt clearance via internet and subject specialist will answer his quarries within next 24 hours.</p>
+                                        <p>Local counselors will be available during office hours to assist in clearing
+                                            study related doubts of the student. Students can also seek doubt clearance
+                                            via internet and subject specialist will answer his quarries within next 24
+                                            hours.</p>
                                         <h4>One-o-One session :</h4><br>
-                                        <p>Students will get their FAQs removed during weekend classes at the last quarter of the session for better grip of the subject.<br>Project Report/Case Studies: Students will be required to prepare and submit the required report/case studies for evaluation by the subject experts. Students will be given opportunities to discuss with their fellow students to interact to learn the practicality of the cases.</p>
+                                        <p>Students will get their FAQs removed during weekend classes at the last
+                                            quarter of the session for better grip of the subject.<br>Project
+                                            Report/Case Studies: Students will be required to prepare and submit the
+                                            required report/case studies for evaluation by the subject experts. Students
+                                            will be given opportunities to discuss with their fellow students to
+                                            interact to learn the practicality of the cases.</p>
                                         <h4>Examination :</h4><br>
-                                        <p>Students will get two options to undertake the examination – classroom system of examination or via internet. The institute will inform well in time to the students for examination schedule and it will be mandatory for all students to appear in the examination at their expenses. The institute will correspond all documents through ordinary post. In case of delay, loss or damage during transit will not be the responsibility of the institute. In the personal interest of students, they are advised to keep themselves in touch with the institute for updates and also regularly visit the website. The AFFINITY INSTITUTE OF MANAGEMENT & TECHNOLOGY (AIMT) reserve the right to add/delete/change/amend the syllabus, course structure rules and regulations wherever considered necessary and appropriate without any prior notice. The students are advised to keep on logging the institute’s website for updating.</p>
+                                        <p>Students will get two options to undertake the examination – classroom system
+                                            of examination or via internet. The institute will inform well in time to
+                                            the students for examination schedule and it will be mandatory for all
+                                            students to appear in the examination at their expenses. The institute will
+                                            correspond all documents through ordinary post. In case of delay, loss or
+                                            damage during transit will not be the responsibility of the institute. In
+                                            the personal interest of students, they are advised to keep themselves in
+                                            touch with the institute for updates and also regularly visit the website.
+                                            The AFFINITY INSTITUTE OF MANAGEMENT & TECHNOLOGY (AIMT) reserve the right
+                                            to add/delete/change/amend the syllabus, course structure rules and
+                                            regulations wherever considered necessary and appropriate without any prior
+                                            notice. The students are advised to keep on logging the institute’s website
+                                            for updating.</p>
                                         <h4>Evaluation :</h4><br>
-                                        <p>Evaluation is conceived, developed and administered on a rigorous and fair basis to bring the best in students and prepare them for challenging careers. The passing marks to obtain are fixed as 50%.</p>
+                                        <p>Evaluation is conceived, developed and administered on a rigorous and fair
+                                            basis to bring the best in students and prepare them for challenging
+                                            careers. The passing marks to obtain are fixed as 50%.</p>
                                         <h4>Grade Percentage :</h4><br>
                                         <p>
                                             Merit 90 & above %<br>
@@ -980,7 +1076,11 @@
                                             B+ 60 & above % <br>
                                             B 50 & above % <br>
                                         </p>
-                                        <p>The results will appear on the institute’s website. All the successful candidates will be awarded with the certification of respective course they appeared and qualified. Those wish to seek duplicate certification need to approach Institute’s Administration Office or their nearest Center for details of formalities.</p>
+                                        <p>The results will appear on the institute’s website. All the successful
+                                            candidates will be awarded with the certification of respective course they
+                                            appeared and qualified. Those wish to seek duplicate certification need to
+                                            approach Institute’s Administration Office or their nearest Center for
+                                            details of formalities.</p>
                                     </div>
                                     <div class="clearfix"></div>
 
@@ -1006,23 +1106,17 @@
                             <div id="categories-3" class="widget sidebar-box widget_categories">
                                 <h4>Quick Links</h4>
                                 <ul>
-                                    <li class="cat-item cat-item-17"><a
-                                            href="../index.html">Home</a>
+                                    <li class="cat-item cat-item-17"><a href="../index.html">Home</a>
                                     </li>
-                                    <li class="cat-item cat-item-1"><a
-                                            href="../contact/">Contact Us</a>
+                                    <li class="cat-item cat-item-1"><a href="../contact/">Contact Us</a>
                                     </li>
-                                    <li class="cat-item cat-item-1"><a
-                                        href="../courses/">Courses</a>
+                                    <li class="cat-item cat-item-1"><a href="../courses/">Courses</a>
                                     </li>
-                                    <li class="cat-item cat-item-1"><a
-                                        href="../gallery/">Gallery</a>
+                                    <li class="cat-item cat-item-1"><a href="../gallery/">Gallery</a>
                                     </li>
-                                    <li class="cat-item cat-item-1"><a
-                                        href="../about/">About Us</a>
+                                    <li class="cat-item cat-item-1"><a href="../about/">About Us</a>
                                     </li>
-                                    <li class="cat-item cat-item-1"><a
-                                        href="../signup/">Enroll Now</a>
+                                    <li class="cat-item cat-item-1"><a href="../signup/">Enroll Now</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1092,61 +1186,61 @@
 
 
             <div class="top-footer">
-				<div class="container">
+                <div class="container">
 
-					<div class="row clearfix">
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
-							<div id="bunch_about_us-2" class="footer-widget widget_bunch_about_us">
-								<div class="footer-about">
-									<h4>About Us</h4>
-									<p>Affinity Institute of Management and Technology is your gateway to exceptional
-										online education. Our renowned faculty, diverse courses, and unwavering
-										commitment to your success make us your trusted partner in the pursuit of
-										knowledge and skill enhancement.
-									</p>
-									<!-- <a href="#" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i>
+                    <div class="row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
+                            <div id="bunch_about_us-2" class="footer-widget widget_bunch_about_us">
+                                <div class="footer-about">
+                                    <h4>About Us</h4>
+                                    <p>Affinity Institute of Management and Technology is your gateway to exceptional
+                                        online education. Our renowned faculty, diverse courses, and unwavering
+                                        commitment to your success make us your trusted partner in the pursuit of
+                                        knowledge and skill enhancement.
+                                    </p>
+                                    <!-- <a href="#" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i>
 										About us</a> <a href="#" class="tran3s"><i class="fa fa-caret-right"
 											aria-hidden="true"></i> Team Member</a> -->
 
-									<ul>
-										<li><a href="https://www.facebook.com"
-												style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
-												class="tran3s round-border icon"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://www.instagram.com"
-												style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
-												class="tran3s round-border icon"><i class="fa fa-instagram"></i></a>
-										</li>
-										<li><a href="https://www.linkedin.com"
-												style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
-												class="tran3s round-border icon"><i class="fa fa-linkedin"></i></a></li>
-										<li><a href="https://www.twitter.com"
-												style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
-												class="tran3s round-border icon"><i class="fa fa-twitter"></i></a></li>
-									</ul>
-								</div>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com"
+                                                style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
+                                                class="tran3s round-border icon"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="https://www.instagram.com"
+                                                style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
+                                                class="tran3s round-border icon"><i class="fa fa-instagram"></i></a>
+                                        </li>
+                                        <li><a href="https://www.linkedin.com"
+                                                style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
+                                                class="tran3s round-border icon"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="https://www.twitter.com"
+                                                style="background-color:rgb(33, 33, 33); color: rgb(255, 255, 255)"
+                                                class="tran3s round-border icon"><i class="fa fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
 
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
-							<div id="bunch_contact_info-2" class="footer-widget widget_bunch_contact_info">
-								<div class="footer-contact">
-									<h4>Contact Us</h4>
-									<ul>
-										<li>
-											<i class="fa fa-envelope-o" aria-hidden="true"></i>
-											<a href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a>
-										</li>
-										<li>
-											<i class="fa fa-phone" aria-hidden="true"></i>
-											<a href="tel:+911234567890" class="tran3s">+91 12345-67890</a>
-										</li>
-										<li><i class="fa fa-map-marker" aria-hidden="true"></i>Not Decided Yet</li>
-									</ul>
-								</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
+                            <div id="bunch_contact_info-2" class="footer-widget widget_bunch_contact_info">
+                                <div class="footer-contact">
+                                    <h4>Contact Us</h4>
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                            <a href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <a href="tel:+911234567890" class="tran3s">+91 12345-67890</a>
+                                        </li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Not Decided Yet</li>
+                                    </ul>
+                                </div>
 
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
                             <div id="nav_menu-2" class="footer-widget widget_nav_menu">
                                 <h4>Quick Link</h4>
                                 <div class="menu-footer-menu-container">
@@ -1179,199 +1273,190 @@
                                 </div>
                             </div>
                         </div>
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
-							<div id="bunch_footer_latest_post-2" class="footer-widget widget_bunch_footer_latest_post">
-								<div class="footer-event">
-									<h4>LATEST POST</h4>
-									<div id="footer-event-carousel" class="carousel slide" data-ride="carousel">
-										<!-- Wrapper for slides -->
-										<ol class="carousel-indicators">
-											<li data-target="#footer-event-carousel" data-slide-to="0" class="active">
-											</li>
-											<li data-target="#footer-event-carousel" data-slide-to="1" class=""></li>
-											<li data-target="#footer-event-carousel" data-slide-to="2" class=""></li>
-										</ol>
-										<!-- Title -->
-										<div class="carousel-inner" role="listbox">
-											<div class="item active">
-												<ul>
-													<li>
-														<div class="date p-color-bg">10 <span>Feb</span></div>
-														<a href="#">
-															<h6>Having fun</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:05 pm
-															</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">10 <span>Feb</span></div>
-														<a href="#">
-															<h6>Best IQ Level</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:05 pm
-															</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">07 <span>Feb</span></div>
-														<a
-															href="#">
-															<h6>New Chicago school budget</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:35 pm
-															</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Our Blog</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-											<div class="item">
-												<ul>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a
-															href="#">
-															<h6>Learning Ability Skills</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:57
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Our Blog</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a
-															href="#">
-															<h6>Best Testing System</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:56
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a
-															href="#">
-															<h6>Mind Level Growth</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:56
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-											<div class="item">
-												<ul>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a
-															href="#">
-															<h6>Well Skilled Staff</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:55
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Our Blog</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a href="#">
-															<h6>Best Management</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:55
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<div class="date p-color-bg">27 <span>Jan</span></div>
-														<a
-															href="#">
-															<h6>Entertainment &amp; Study</h6>
-														</a>
-														<ul>
-															<li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:54
-																am</li>
-															<li><i class="fa fa-tags" aria-hidden="true"></i>
-																<ul class="post-categories">
-																	<li><a href="#"
-																			rel="category tag">Latest News</a></li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div> <!-- /#footer-event-carousel -->
-								</div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-column">
+                            <div id="bunch_footer_latest_post-2" class="footer-widget widget_bunch_footer_latest_post">
+                                <div class="footer-event">
+                                    <h4>LATEST POST</h4>
+                                    <div id="footer-event-carousel" class="carousel slide" data-ride="carousel">
+                                        <!-- Wrapper for slides -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#footer-event-carousel" data-slide-to="0" class="active">
+                                            </li>
+                                            <li data-target="#footer-event-carousel" data-slide-to="1" class=""></li>
+                                            <li data-target="#footer-event-carousel" data-slide-to="2" class=""></li>
+                                        </ol>
+                                        <!-- Title -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <ul>
+                                                    <li>
+                                                        <div class="date p-color-bg">10 <span>Feb</span></div>
+                                                        <a href="#">
+                                                            <h6>Having fun</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:05 pm
+                                                            </li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">10 <span>Feb</span></div>
+                                                        <a href="#">
+                                                            <h6>Best IQ Level</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:05 pm
+                                                            </li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">07 <span>Feb</span></div>
+                                                        <a href="#">
+                                                            <h6>New Chicago school budget</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 1:35 pm
+                                                            </li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Our Blog</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="item">
+                                                <ul>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Learning Ability Skills</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:57
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Our Blog</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Best Testing System</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:56
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Mind Level Growth</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:56
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="item">
+                                                <ul>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Well Skilled Staff</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:55
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Our Blog</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Best Management</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:55
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date p-color-bg">27 <span>Jan</span></div>
+                                                        <a href="#">
+                                                            <h6>Entertainment &amp; Study</h6>
+                                                        </a>
+                                                        <ul>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i> 11:54
+                                                                am</li>
+                                                            <li><i class="fa fa-tags" aria-hidden="true"></i>
+                                                                <ul class="post-categories">
+                                                                    <li><a href="#" rel="category tag">Latest News</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /#footer-event-carousel -->
+                                </div>
 
-							</div>
-						</div>
-					</div>
+                            </div>
+                        </div>
+                    </div>
 
-				</div>
-			</div> <!-- /.top-footer -->
+                </div>
+            </div> <!-- /.top-footer -->
 
 
-			<div class="bottom-footer">
-				<p>Copyright 2024 © <a href="" class="tran3s" target="_blank">Affinity Institute of Management and
-						Technology</a> <span class="p-color"></span> | Developed by <a href="" class="tran3s"
-						target="_blank">WayBig.in</a></p>
-			</div> <!-- /.bottom-footer -->
+            <div class="bottom-footer">
+                <p>Copyright 2024 © <a href="" class="tran3s" target="_blank">Affinity Institute of Management and
+                        Technology</a> <span class="p-color"></span> | Developed by <a href="" class="tran3s"
+                        target="_blank">WayBig.in</a></p>
+            </div> <!-- /.bottom-footer -->
 
         </footer>
 
