@@ -1000,18 +1000,65 @@
                         <form>
                             <div>
                                 <div class="av-widget">
-                                    <h4>Other Courses</h4>
+                                    <h4>Bachelors of Engineering</h4>
                                     <div class="tutor-course-filter-nested-terms">
-                                        <label><input type="checkbox" name="tutor-course-filter-category"
-                                                value="24">Bachelors of Engineering in CSE</label>
-                                        <label><input type="checkbox" name="tutor-course-filter-category"
-                                                value="24">Bachelors of Engineering</label>
-                                        <label><input type="checkbox" name="tutor-course-filter-category"
-                                                value="24">Bachelors of Engineering</label>
-                                        <label><input type="checkbox" name="tutor-course-filter-category"
-                                                value="24">Bachelors of Engineering</label>
-                                        <label><input type="checkbox" name="tutor-course-filter-category"
-                                                value="24">Bachelors of Engineering</label>
+                                        <label onclick="redirect('Civil')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Civil</label>
+                                        <label onclick="redirect('Electronics-and-Telecommunication')"><input
+                                                type="checkbox" name="tutor-course-filter-category"
+                                                value="24">Electronics and Telecommunication</label>
+                                        <label onclick="redirect('Automobile')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Automobile</label>
+                                        <label onclick="redirect('Chemical')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Chemical</label>
+                                        <label onclick="redirect('Computer-Science')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Computer Science</label>
+                                        <label onclick="redirect('Electrical')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Electrical</label>
+                                        <label onclick="redirect('Electrical-&-Electronics')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Electrical &
+                                            Electronics</label>
+                                        <label onclick="redirect('Electronics')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Electronics</label>
+                                        <label onclick="redirect('Information-Technology')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Information
+                                            Technology</label>
+                                        <label onclick="redirect('Mechanical')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Mechanical</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="av-widget">
+                                    <h4>Bachelors of Engineering</h4>
+                                    <div class="tutor-course-filter-nested-terms">
+                                        <label onclick="redirect('Fire-&-Safety-Management')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Fire & Safety
+                                            Management</label>
+                                        <label onclick="redirect('INDUSTRIAL-AND-SAFETY-MANAGEMENT')"><input
+                                                type="checkbox" name="tutor-course-filter-category"
+                                                value="24">INDUSTRIAL AND SAFETY MANAGEMENT</label>
+                                        <label onclick="redirect('Safety-Management')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Safety Management</label>
+                                        <label onclick="redirect('ADBM')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">ADBM</label>
+                                        <label onclick="redirect('Fashion-Management')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Fashion
+                                            Management</label>
+                                        <label onclick="redirect('Hotel-Management')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Hotel Management</label>
+                                        <label onclick="redirect('MATERIALS-MANAGEMENT')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">MATERIALS
+                                            MANAGEMENT</label>
+                                        <label onclick="redirect('Store-Management')"><input type="checkbox"
+                                                name="tutor-course-filter-category" value="24">Store Management</label>
+
+                                        <script>
+                                            function redirect(courseName) {
+                                                const formattedCourseName = courseName.replace(/\s+/g, '-');
+                                                window.location.href = window.location.pathname + "?course=" + encodeURIComponent(formattedCourseName);
+                                            }
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -1021,9 +1068,11 @@
                         <div class="tutor-course-filter-loop-container course-item-wrapper" data-column_per_row="3">
                             <div class="tutor-course-filter-wrap">
                                 <div class="tutor-course-archive-results-wrap">
-                                    <h2 style="font-size: 22px;text-align: left;margin-bottom: 10px;">Name of the Course
+                                    <h2 id="course" style="font-size: 22px;text-align: left;margin-bottom: 10px;">Name
+                                        of the Course
                                     </h2>
-                                    <p style="font-weight: 300;font-size: 15px;">Lorem ipsum, dolor sit amet consectetur
+                                    <p id="course_desc" style="font-weight: 300;font-size: 15px;">Lorem ipsum, dolor sit
+                                        amet consectetur
                                         adipisicing elit. Exercitationem
                                         assumenda blanditiis quisquam voluptas, doloremque voluptate nisi laboriosam,
                                         velit inventore nesciunt, quia tenetur non perspiciatis. Cumque quia accusamus
@@ -1031,49 +1080,7 @@
                                 </div>
                             </div>
 
-                            <div class="tutor-courses tutor-courses-loop-wrap tutor-courses-layout-3">
-                                <div class="tutor-course-col-3">
-                                    <div style="height: auto;" class="tutor-course tutor-course-loop tutor-course-loop-912">
-                                        <div class="course-block-edu">
-                                            <div class="hvr-float-shadow single-course-item">
-                                                <div style="padding-top: 20px;" class="text p-r20 p-l20">
-                                                    <h4 class="l-h1">Semester 1</h4>
-                                                    <div class="cour-meta">
-                                                        <ol style="padding-left: 20px;">
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Mathmatics-1</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Physics</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Mechanical</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Drawings</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Mechanics</li>
-                                                        </ol>
-                                                    </div>
-                                                </div> <!-- /.text -->
-                                            </div>
-                                        </div> <!-- /.item -->
-
-                                    </div>
-                                </div>
-                                <div class="tutor-course-col-3">
-                                    <div style="height: auto;" class="tutor-course tutor-course-loop tutor-course-loop-912">
-                                        <div class="course-block-edu">
-                                            <div class="hvr-float-shadow single-course-item">
-                                                <div style="padding-top: 20px;" class="text p-r20 p-l20">
-                                                    <h4 class="l-h1">Semester 1</h4>
-                                                    <div class="cour-meta">
-                                                        <ol style="padding-left: 20px;">
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Mathmatics-1</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Physics</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Mechanical</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Drawings</li>
-                                                            <li style="text-align: left; border: none;line-height: 20px;margin-top: 7px;">Engineering Mechanics</li>
-                                                        </ol>
-                                                    </div>
-                                                </div> <!-- /.text -->
-                                            </div>
-                                        </div> <!-- /.item -->
-
-                                    </div>
-                                </div>
+                            <div id="courses" class="tutor-courses tutor-courses-loop-wrap tutor-courses-layout-3">
                             </div>
                             <div class="tutor-pagination-wrap">
                             </div>
@@ -1437,6 +1444,89 @@
             </div>
         </div>
     </div>
+    <script>
+        function courseCompo(semester, subjects) {
+            // Create main container
+            const container = document.createElement('div');
+            container.className = 'tutor-course-col-3';
+
+            // Create course block
+            const courseBlock = document.createElement('div');
+            courseBlock.className = 'course-block-edu';
+
+            // Create single course item
+            const singleCourseItem = document.createElement('div');
+            singleCourseItem.className = 'hvr-float-shadow single-course-item';
+
+            // Create text container
+            const textContainer = document.createElement('div');
+            textContainer.style.paddingTop = '20px';
+            textContainer.className = 'text p-r20 p-l20';
+
+            // Create heading
+            const heading = document.createElement('h4');
+            heading.className = 'l-h1';
+            heading.textContent = semester;
+
+            // Create course meta container
+            const courMeta = document.createElement('div');
+            courMeta.className = 'cour-meta';
+
+            // Create ordered list
+            const ol = document.createElement('ol');
+            ol.style.paddingLeft = '20px';
+
+            // Create list items for subjects
+            subjects.forEach(subject => {
+                const li = document.createElement('li');
+                li.style.textAlign = 'left';
+                li.style.border = 'none';
+                li.style.lineHeight = '20px';
+                li.style.marginTop = '7px';
+                li.textContent = subject;
+                ol.appendChild(li);
+            });
+
+            // Append elements to their respective parent containers
+            courMeta.appendChild(ol);
+            textContainer.appendChild(heading);
+            textContainer.appendChild(courMeta);
+            singleCourseItem.appendChild(textContainer);
+            courseBlock.appendChild(singleCourseItem);
+            container.appendChild(courseBlock);
+
+            return container;
+        }
+
+
+        async function getCourseDetails() {
+            const queryParams = new URLSearchParams(window.location.search);
+            const course = queryParams.get('course');
+
+            let i_data = await fetch('http://localhost:5000/getCourse/' + course);
+            let data = await i_data.json();
+            let courses = data.data;
+
+            let cName = document.getElementById('course');
+            let cDesc = document.getElementById('course_desc');
+            let cContainer = document.getElementById('courses');
+
+            cName.innerHTML = courses.course;
+            cDesc.innerHTML = courses.description;
+
+            const subjects = courses.subjects;
+
+            // Generate the semesters array based on the length of the subjects array
+            const semesters = Array.from({ length: subjects.length }, (_, index) => `Semester ${index + 1}`);
+
+            // Append the dynamic components to the 'courses' container for each semester
+            semesters.forEach((semester, index) => {
+                cContainer.appendChild(courseCompo(semester, subjects[index]));
+            });
+        }
+
+        getCourseDetails();
+    </script>
     <script>
         (function (body) {
             'use strict';

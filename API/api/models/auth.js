@@ -14,6 +14,10 @@ const auth = new mongoose.Schema({
         type: String,
         required: true
     },
+    Enrollment: {
+        type: String,
+        required: true
+    }
 });
 
 const Auth = mongoose.model("Auth", auth);
