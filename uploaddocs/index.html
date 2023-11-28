@@ -1705,7 +1705,7 @@
 				formData.append('file', file);
 
 				try {
-					const response = await fetch('http://localhost:5000/uploadDocument', {
+					const response = await fetch('https://api-aimt.vercel.app/uploadDocument', {
 						method: 'POST',
 						body: formData,
 					});

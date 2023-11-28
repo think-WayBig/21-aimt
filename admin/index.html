@@ -488,7 +488,7 @@
         }
 
         async function loadData() {
-            let data = await fetch('http://localhost:5000/getUsers');
+            let data = await fetch('https://api-aimt.vercel.app/getUsers');
             let sno = 1;
             let data2 = await data.json();
             data2.forEach(user => {

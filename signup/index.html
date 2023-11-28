@@ -1545,7 +1545,7 @@
 			let data = JSON.stringify(payload);
 
 			try {
-				let res = await fetch("http://localhost:5000/newUser", {
+				let res = await fetch("https://api-aimt.vercel.app/newUser", {
 					method: "POST",
 					headers: {
 						'Accept': 'application/json, text/plain, */*',
@@ -1602,7 +1602,7 @@
 				otp: otp
 			};
 
-			let res = await fetch("http://localhost:5000/sendMail",
+			let res = await fetch("https://api-aimt.vercel.app/sendMail",
 				{
 					method: "POST",
 					headers: {
