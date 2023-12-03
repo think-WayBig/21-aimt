@@ -1355,23 +1355,31 @@
 									<input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Submit"
 										id="btnsave" class="commonBtn" style="width:200px;" autocomplete="off">
 								</div>
+								<div class="col-md-3" bis_skin_checked="1">
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Re-Upload Docs"
+										onclick="forward()" class="commonBtn" style="width:200px;" autocomplete="off">
+								</div>
 							</div>
 
 							<script>
-								function checkEmail() {
+								function checkUpdate() {
 									if (localStorage.getItem('email') != null) {
-										let commonBtn = document.getElementById('commonBtn');
+										let commonBtn = document.getElementById('btnsave');
 										commonBtn.value = "Update";
 										commonBtn.addEventListener("click", () => {
 											updateData();
 										})
 									}
 								}
-								checkEmail();
+								checkUpdate();
+
+								function forward() {
+									location.href = "../uploaddocs"
+								}
 							</script>
 
 						</div>
-
+						
 					</div>
 				</div>
 			</div>
@@ -1871,8 +1879,8 @@
 
 				try {
 					// Make a POST request using fetch
-					const response = await fetch('http://localhost:5000/newAdmission', {
-						method: 'POST',
+					const response = await fetch('http://localhost:5000/updateAdmission/' + email.value, {
+						method: 'PUT',
 						headers: {
 							'Content-Type': 'application/json'
 						},

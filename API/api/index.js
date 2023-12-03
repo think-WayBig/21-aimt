@@ -230,6 +230,28 @@ app.get('/getAdmission/:email', async (req, res) => {
     }
 });
 
+app.put('/updateDocs/:Email', async (req, res) => {
+    try {
+        const result = await Admission.findOneAndUpdate(
+            { Email: req.params.Email },
+            { $set: { Docs: req.body.Docs } },
+            { returnOriginal: false }
+        );
+
+        console.log('Query:', { Docs: req.body.Docs });
+        console.log('Update Result:', result);
+
+        if (result) {
+            res.status(200).json({ message: 'Docs updated successfully', updatedDocument: result });
+        } else {
+            res.status(404).json({ message: 'Document not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
 
 const sendGridMail = require('@sendgrid/mail');
 sendGridMail.setApiKey("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");
@@ -237,7 +259,7 @@ sendGridMail.setApiKey("SG.4jVyQawhSXGLHGsbeEWPiw.7Kr5a__4Hr-p8BF7HVrYKLBVmaoNNI
 app.post('/sendMail', async (req, res) => {
     const msg = {
         to: req.body.Mail,
-        from: 'rkinfotechasr@gmail.com',
+        from: 'verification@aimt.net.in',
         subject: 'Verify your email',
         html: `<div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
         <div style="margin:50px auto;width:70%;padding:20px 0">
@@ -286,28 +308,6 @@ app.put('/updateStatus/:enrollment', async (req, res) => {
 
         if (result) {
             res.status(200).json({ message: 'Status updated successfully', updatedDocument: result });
-        } else {
-            res.status(404).json({ message: 'Document not found' });
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
-});
-
-app.put('/updateDocs', async (req, res) => {
-    try {
-        const result = await Auth.findOneAndUpdate(
-            { Email: req.body.Email },
-            { $set: { Docs: req.body.Docs } },
-            { returnOriginal: false }
-        );
-
-        console.log('Query:', { Docs: req.body.Docs });
-        console.log('Update Result:', result);
-
-        if (result) {
-            res.status(200).json({ message: 'Docs updated successfully', updatedDocument: result });
         } else {
             res.status(404).json({ message: 'Document not found' });
         }
@@ -420,7 +420,7 @@ app.post('/uploadDocument', upload.single('file'), async (req, res) => {
 app.post('/sendEnrollment', async (req, res) => {
     const msg = {
         to: req.body.Mail,
-        from: 'rkinfotechasr@gmail.com',
+        from: 'verification@aimt.net.in',
         subject: 'You are successfully enrolled!!',
         html: ``
     };

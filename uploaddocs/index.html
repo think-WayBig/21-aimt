@@ -749,6 +749,13 @@
 
 <body
 	class="page-template page-template-tpl-default-elementor page-template-tpl-default-elementor-php page page-id-27 theme-edutech woocommerce-js tribe-js menu-layer elementor-default elementor-kit-9 elementor-page elementor-page-27">
+
+	<script>
+		if (localStorage.getItem("email") == undefined || localStorage.getItem("email") == null || localStorage.getItem("email") == "") {
+			location.href = "../signup";
+		}
+	</script>
+
 	<div class="main-page-wrapper">
 		<!-- Header _________________________________ -->
 		<header class="inner-header">
@@ -1554,8 +1561,16 @@
 								</div>
 							</div>
 							<input style="margin: auto; margin-top: 50px;zoom: 1.1;" type="submit"
-								name="ctl00$ContentPlaceHolder1$btnUpload" value="Submit" id="uploadBtn8"
-								class="commonBtn">
+								name="ctl00$ContentPlaceHolder1$btnUpload" value="Submit" id="submitBtn"
+								class="commonBtn" onclick="uploadDocuments()">
+
+							<input onclick="goback()" style="margin: auto; margin-top: 20px;zoom: 1.1;" type="submit"
+								name="ctl00$ContentPlaceHolder1$btnUpload" value="Go Back" id="back" class="commonBtn">
+							<script>
+								function goback() {
+									location.href = '../admissionform';
+								}
+							</script>
 						</div>
 					</div>
 				</div>
@@ -1954,17 +1969,23 @@
 			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 		}
 
-		// Object to store uploaded file URLs
-		const uploadedFileURLs = {
-			"10Th Certificate": null,
-			"12Th Certificate": null,
-			"Applicant Photo": null,
-			"Identity-proof": null,
-			"Address Proof": null,
-			"Degree": null,
-			"Applicant Signature": null,
-			"Diploma": null
+		// Load the uploadedFileURLs object from local storage (if it exists)
+		const storedFileURLs = localStorage.getItem('uploadedFileURLs');
+		const uploadedFileURLs = storedFileURLs ? JSON.parse(storedFileURLs) : {
+			"tenthCertificate": null,
+			"twelthCertificate": null,
+			"applicantPhoto": null,
+			"identityProof": null,
+			"addressProof": null,
+			"degree": null,
+			"applicantSignature": null,
+			"diploma": null
 		};
+
+		function saveToLocalStorage() {
+			// Save the updated uploadedFileURLs object to local storage
+			localStorage.setItem('uploadedFileURLs', JSON.stringify(uploadedFileURLs));
+		}
 
 		function createFileUploadFunction(contentPlaceHolderId, uploadBtnId, fileKey) {
 			return async function () {
@@ -1993,6 +2014,9 @@
 
 						// Store the URL in the object with the corresponding key
 						uploadedFileURLs[fileKey] = fileURL;
+
+						// Save the updated object to local storage
+						saveToLocalStorage();
 
 						alertMessage('File uploaded successfully!');
 						uploadBtn.value = "Upload Again";
@@ -2023,6 +2047,66 @@
 
 			document.getElementById(uploadBtnId).addEventListener('click', createFileUploadFunction(contentPlaceHolderId, uploadBtnId, fileKey));
 		}
+
+		async function uploadDocuments() {
+			if (
+				JSON.parse(storedFileURLs).tenthCertificate === undefined ||
+				JSON.parse(storedFileURLs).tenthCertificate === null ||
+				JSON.parse(storedFileURLs).tenthCertificate === ""
+			) {
+				alertMessage("Please upload 10th certificate.");
+				return;
+			} else if (
+				JSON.parse(storedFileURLs).twelthCertificate === undefined ||
+				JSON.parse(storedFileURLs).twelthCertificate === null ||
+				JSON.parse(storedFileURLs).twelthCertificate === ""
+			) {
+				alertMessage("Please upload 12th certificate.");
+				return;
+			} else if (
+				JSON.parse(storedFileURLs).applicantPhoto === undefined ||
+				JSON.parse(storedFileURLs).applicantPhoto === null ||
+				JSON.parse(storedFileURLs).applicantPhoto === ""
+			) {
+				alertMessage("Please upload your image.");
+				return;
+			} else if (
+				JSON.parse(storedFileURLs).identityProof === undefined ||
+				JSON.parse(storedFileURLs).identityProof === null ||
+				JSON.parse(storedFileURLs).identityProof === ""
+			) {
+				alertMessage("Please upload Identity Proof.");
+				return;
+			}
+
+			try {
+				let mail = localStorage.getItem("email");
+				// Make a POST request using fetch
+				const response = await fetch("http://localhost:5000/updateDocs/" + mail, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ Docs: JSON.stringify(uploadedFileURLs) }),
+				});
+
+				console.log(JSON.stringify(uploadedFileURLs));
+
+				// Check if the request was successful (status code 200-299)
+				if (response.ok) {
+					alertMessage("Data sent successfully!");
+					setTimeout(() => {
+						location.href = "../uploaddocs";
+					}, 1000);
+				} else {
+					alertMessage("Failed to send data. Please try again.");
+				}
+			} catch (error) {
+				console.error("Error:", error);
+				alertMessage("An error occurred. Please try again later.");
+			}
+		}
+
 	</script>
 
 
