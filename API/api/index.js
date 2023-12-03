@@ -50,7 +50,7 @@ app.post('/newUser', async (req, res) => {
             Name: req.body.Name,
             Mail: req.body.Mail,
             Password: req.body.Password,
-            Enrollment: Math.floor(Math.random() * 9000000) + 1000000
+            Enrollment: "aimt" + Math.floor(Math.random() * 9000000),
         });
 
         await auth.save();
@@ -106,6 +106,7 @@ app.post('/newAdmission', async (req, res) => {
             Email: req.body.Email,
             Country: req.body.Country,
             State: req.body.State,
+            City: req.body.City,
             Mschool: req.body.Mschool,
             Myear: req.body.Myear,
             Mpercent: req.body.Mpercent,
@@ -118,6 +119,8 @@ app.post('/newAdmission', async (req, res) => {
             Gcollege: req.body.Gcollege,
             Gyear: req.body.Gyear,
             Gpercent: req.body.Gpercent,
+            Examination: req.body.Examination,
+            Docs: "null",
         });
 
         await admission.save();
@@ -138,6 +141,96 @@ app.post('/newAdmission', async (req, res) => {
         })
     }
 });
+
+app.put('/updateAdmission/:email', async (req, res) => {
+    try {
+        const email = req.params.email;
+
+        // Find the document based on the email
+        let admission = await Admission.findOne({ Email: email });
+
+        if (!admission) {
+            return res.status(404).send({
+                message: "No admission record found for the provided email",
+                data: null
+            });
+        }
+
+        // Update the admission object with new data from req.body
+        admission.Name = req.body.Name;
+        admission.Gender = req.body.Gender;
+        admission.Course = req.body.Course;
+        admission.Specialization = req.body.Specialization;
+        admission.Category = req.body.Category;
+        admission.Fname = req.body.Fname;
+        admission.Mname = req.body.Mname;
+        admission.Dob = req.body.Dob;
+        admission.Address = req.body.Address;
+        admission.Phone = req.body.Phone;
+        admission.Country = req.body.Country;
+        admission.State = req.body.State;
+        admission.City = req.body.City;
+        admission.Mschool = req.body.Mschool;
+        admission.Myear = req.body.Myear;
+        admission.Mpercent = req.body.Mpercent;
+        admission.Dcollege = req.body.Dcollege;
+        admission.Dyear = req.body.Dyear;
+        admission.Dpercent = req.body.Dpercent;
+        admission.Hschool = req.body.Hschool;
+        admission.Hyear = req.body.Hyear;
+        admission.Hpercent = req.body.Hpercent;
+        admission.Gcollege = req.body.Gcollege;
+        admission.Gyear = req.body.Gyear;
+        admission.Gpercent = req.body.Gpercent;
+        admission.Examination = req.body.Examination;
+
+        // Save the updated admission object
+        await admission.save();
+
+        console.log("Data updated successfully");
+
+        res.status(200).send({
+            message: "Data updated successfully",
+            data: admission
+        });
+    } catch (error) {
+        res.status(500).send({
+            message: "Failed to update data",
+            error: error,
+            data: null
+        });
+    }
+});
+
+app.get('/getAdmission/:email', async (req, res) => {
+    try {
+        const email = req.params.email;
+
+        // Using Mongoose findOne to find the document based on email
+        const admission = await Admission.findOne({ Email: email });
+
+        if (!admission) {
+            // If no admission record is found for the provided email
+            return res.status(404).send({
+                message: "No admission record found for the provided email",
+                data: null
+            });
+        }
+
+        res.status(200).send({
+            message: "Data retrieved successfully",
+            data: admission
+        });
+    } catch (error) {
+        res.status(500).send({
+            message: "Failed to retrieve data",
+            error: error,
+            data: null
+        });
+    }
+});
+
+
 const sendGridMail = require('@sendgrid/mail');
 sendGridMail.setApiKey("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");
 
@@ -175,6 +268,52 @@ app.post('/sendMail', async (req, res) => {
             message: "Error",
             error: error
         });
+    }
+});
+
+app.put('/updateStatus/:enrollment', async (req, res) => {
+    const enrollment = req.params.enrollment;
+
+    try {
+        const result = await Auth.findOneAndUpdate(
+            { Enrollment: enrollment },
+            { $set: { Status: "1" } },
+            { returnOriginal: false }
+        );
+
+        console.log('Query:', { Enrollment: enrollment });
+        console.log('Update Result:', result);
+
+        if (result) {
+            res.status(200).json({ message: 'Status updated successfully', updatedDocument: result });
+        } else {
+            res.status(404).json({ message: 'Document not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
+app.put('/updateDocs', async (req, res) => {
+    try {
+        const result = await Auth.findOneAndUpdate(
+            { Email: req.body.Email },
+            { $set: { Docs: req.body.Docs } },
+            { returnOriginal: false }
+        );
+
+        console.log('Query:', { Docs: req.body.Docs });
+        console.log('Update Result:', result);
+
+        if (result) {
+            res.status(200).json({ message: 'Docs updated successfully', updatedDocument: result });
+        } else {
+            res.status(404).json({ message: 'Document not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
 });
 
@@ -283,23 +422,7 @@ app.post('/sendEnrollment', async (req, res) => {
         to: req.body.Mail,
         from: 'rkinfotechasr@gmail.com',
         subject: 'You are successfully enrolled!!',
-        html: `<div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
-        <div style="margin:50px auto;width:70%;padding:20px 0">
-          <div style="border-bottom:1px solid #eee">
-            <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">Affinity Institute of Management and Technology</a>
-          </div>
-          <p style="font-size:1.1em">Hi,</p>
-          <p>Thank you for choosing Affinity Institute of Management and Technology. Use the following OTP to complete your Sign Up procedures. OTP is valid for 5 minutes</p>
-          <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">${req.body.otp}</h2>
-          <p style="font-size:0.9em;">Regards,<br />Affinity Institute of Management and Technology</p>
-          <hr style="border:none;border-top:1px solid #eee" />
-          <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
-            <p>Affinity Intitute of Management and Technology</p>
-            Visit <a href="https://aimt.net.in">https://aimt.net.in</a>
-            <p>India</p>
-          </div>
-        </div>
-      </div>`
+        html: ``
     };
 
     try {

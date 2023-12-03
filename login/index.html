@@ -928,7 +928,7 @@
 									<input type="password" name="pass" id="pass" placeholder="Password">
 								</div>
 								<div class="form-group" style="margin-bottom: 10px;">
-									<a href="">Forgot Password?</a>
+									<a href="../forgot-password/">Forgot Password?</a>
 								</div>
 								<div class="form-group form-button">
 									<input type="submit" name="signup" id="submitDetails" class="form-submit"
@@ -1418,59 +1418,58 @@
 			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 		}
 
-		document.getElementById("submitDetails").addEventListener("click", (e) => {
-			e.preventDefault();
-			sendUserDetails();
-		})
-
-		async function sendUserDetails() {
-			let name = document.getElementById("name");
-			let email = document.getElementById("email");
+		async function checkData() {
+			let mail = document.getElementById("email");
 			let pass = document.getElementById("pass");
-			let re_pass = document.getElementById("re_pass");
 
-			if (name.value == null || name.value == "" || !name.value) {
-				alertMessage("Please enter a Name");
-				name.focus();
+			if (mail.value == "" || mail.value == null) {
+				alertMessage("Please enter registered mail.")
+				mail.focus();
 				return;
-			} else if (email.value == null || email.value == "" || !email.value) {
-				alertMessage("Please enter a Email");
-				email.focus();
-				return;
-			} else if (pass.value == null || pass.value == "" || !pass.value) {
-				alertMessage("Please enter a Password");
-				pass.focus();
-				return;
-			} else if (re_pass.value == null || re_pass.value == "" || !re_pass.value) {
-				alertMessage("Please re-enter Password");
-				re_pass.focus();
-				return;
-			} else if (re_pass.value != pass.value) {
-				alertMessage("Re-entered password does not match");
-				re_pass.focus();
+			} else if (pass.value == "" || pass.value == null) {
+				alertMessage("Please enter your password.")
+				mail.focus();
 				return;
 			}
 
 			var payload = {
-				Name: name.value,
-				Mail: email.value,
-				Password: pass.value
+				Mail: mail.value,
 			};
 
 			let data = JSON.stringify(payload);
 
-			let res = await fetch("http://localhost:5000/newUser",
-				{
-					method: "POST",
-					headers: {
-						'Accept': 'application/json, text/plain, */*',
-						'Content-Type': 'application/json'
-					},
-					body: data
-				})
-			let responseJSON = await res.json();
-			console.log(responseJSON);
+			try {
+				let res = await fetch("https://api-aimt.vercel.app/user",
+					{
+						method: "POST",
+						headers: {
+							'Accept': 'application/json, text/plain, */*',
+							'Content-Type': 'application/json'
+						},
+						body: data
+					})
+				let responseJSON = await res.json();
+				let user = await responseJSON.data;
+				let password = user.Password;
+				if (password == pass.value) {
+					alertMessage("Success!!");
+					localStorage.setItem("email", mail.value);
+					setTimeout(() => {
+						location.href = "../admissionform";
+					}, 1500); 
+				} else {
+					alertMessage("Invalid Password!");
+				}
+			} catch (error) {
+				alertMessage("Email not found!");
+			}
 		}
+
+		document.getElementById("submitDetails").addEventListener("click", (e) => {
+			e.preventDefault();
+			checkData();
+		})
+	</script>
 	</script>
 	<script>(function () {
 			function maybePrefixUrlField() {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js no-svg">
+<html style="scroll-behavior: smooth;" lang="en-US" class="no-js no-svg">
 
 <head>
 	<meta charset="UTF-8">
@@ -747,55 +747,64 @@
 
 <body
 	class="page-template page-template-tpl-default-elementor page-template-tpl-default-elementor-php page page-id-27 theme-edutech woocommerce-js tribe-js menu-layer elementor-default elementor-kit-9 elementor-page elementor-page-27">
+
+	<script>
+		if (localStorage.getItem("email") == undefined || localStorage.getItem("email") == null || localStorage.getItem("email") == "") {
+			location.href = "../signup";
+		}
+	</script>
+
 	<div class="main-page-wrapper">
 		<!-- Header _________________________________ -->
 		<header class="inner-header">
 
-            <style>
-                @media (max-width: 450px) {
-                    .custom-ul {
-                        display: none;
-                    }
+			<style>
+				@media (max-width: 450px) {
+					.custom-ul {
+						display: none;
+					}
 
-                    .custom-ul2 {
-                        padding: 11px!important;
-                    }
-                }
-            </style>
+					.custom-ul2 {
+						padding: 11px !important;
+					}
+				}
+			</style>
 
-            <div class="custom-ul2 top-header">
-                <div style="padding: 5px 0;" class="custom-ul container">
-                    <div class="left-side float-left">
-                        <ul>
-                            <li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a
-                                    href="javascript:void(0);" class="tran3s">Not Decided Yet</a>
-                            </li>
-                            <li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a
-                                    href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a></li>
-                            <li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a
-                                    href="Tel:+91 12345-67890" class="tran3s">+91 12345-67890</a></li>
-                        </ul>
-                    </div> <!-- /.left-side -->
+			<div class="custom-ul2 top-header">
+				<div style="padding: 5px 0;" class="custom-ul container">
+					<div class="left-side float-left">
+						<ul>
+							<li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a
+									href="javascript:void(0);" class="tran3s">Not Decided Yet</a>
+							</li>
+							<li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a
+									href="mailto:info@aimt.net.in" class="tran3s">info@aimt.net.in</a></li>
+							<li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a
+									href="Tel:+91 12345-67890" class="tran3s">+91 12345-67890</a></li>
+						</ul>
+					</div> <!-- /.left-side -->
 
-                    <style>
-                        .custom-con3 {
-                            display: flex;
-                            justify-content: center;
-                        }
-                        @media (max-width: 1000px) {
-                            .custom-con3 {
-                                display: none;
-                            }
-                        }
-                    </style>
+					<style>
+						.custom-con3 {
+							display: flex;
+							justify-content: center;
+						}
 
-                    <!--Info Box-->
-                    <div class="right-side float-right custom-con3">
-                        <div style="padding: 10px 30px;background-color: white;width: 250px;display: flex;justify-content: center;">
-                            <a href="../verification/"><i style="position: relative;top: 2px;"
-                                    class="fi fi-rr-document"></i>&nbsp; Document Verification</a>
-                        </div>
-                        <!-- <ul>
+						@media (max-width: 1000px) {
+							.custom-con3 {
+								display: none;
+							}
+						}
+					</style>
+
+					<!--Info Box-->
+					<div class="right-side float-right custom-con3">
+						<div
+							style="padding: 10px 30px;background-color: white;width: 250px;display: flex;justify-content: center;">
+							<a href="../verification/"><i style="position: relative;top: 2px;"
+									class="fi fi-rr-document"></i>&nbsp; Document Verification</a>
+						</div>
+						<!-- <ul>
                             <li><a class="tran3s round-border icon" target="_blank" href="https://www.facebook.com/"
                                     style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
                                         class="fa fa-facebook"></span></a></li>
@@ -809,160 +818,193 @@
                                     style="background-color:rgb(237, 234, 234); color: rgb(51,+51,+50)"><span
                                         class="fa fa-twitter"></span></a></li>
                         </ul> -->
-                    </div>
+					</div>
 
-                </div>
-            </div> <!-- /.top-header -->
+				</div>
+			</div> <!-- /.top-header -->
 
-            <!-- _______________________ Theme Menu _____________________ -->
+			<!-- _______________________ Theme Menu _____________________ -->
 
-            <div class="container">
-                <div class="main-menu-wrapper clear-fix">
-                    <div class="container">
-                        <div class="logo float-left">
-                            <a href="./index.html" title="AIMT"><img src="images/logo2.png" alt="logo"></a>
-                        </div>
+			<div class="container">
+				<div class="main-menu-wrapper clear-fix">
+					<div class="container">
+						<div class="logo float-left">
+							<a href="./index.html" title="AIMT"><img src="images/logo2.png" alt="logo"></a>
+						</div>
 
-                        <!-- <form action="./index.html" class="float-right" method="get">
+						<!-- <form action="./index.html" class="float-right" method="get">
                             <input type="text" name="s" placeholder="Search">
                             <button><i class="fa fa-search" aria-hidden="true"></i></button>
                         </form> -->
 
 
-                        <!-- Menu -->
-                        <nav class="navbar float-right">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target="#navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                    <li id="menu-item-58"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
-                                        <a title="Home" href="../index.html" data-toggle="dropdown1"
-                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-                                            data-options="easing: easeOutQuart">Home</a>
-                                    </li>
-                                    <li id="menu-item-79"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
-                                        <a title="About" href="../about" data-toggle="dropdown1"
-                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-                                            data-options="easing: easeOutQuart">About</a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li id="menu-item-74"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-                                                <a title="Who We Are" href="../Who-We-Are">Who We Are</a>
-                                            </li>
-                                            <li id="menu-item-75"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-                                                <a title="Our Mission" href="../Our-Mission">Our Mission</a>
-                                            </li>
-                                            <li id="menu-item-71"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="Our Vision" href="../Our-Vision">Our Vision</a>
-                                            </li>
-                                            <li id="menu-item-72"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="Chairman Message" href="../Chairman-Message">Chairman Message</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-76"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
-                                        <a title="Courses" href="../courses/technical/" data-toggle="dropdown1"
-                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-                                            data-options="easing: easeOutQuart">Courses</a>
-                                        <ul role="menu" class="sub-menu">
-                                            <li id="menu-item-82"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-                                                <a title="Technical" href="../courses/technical/">Technical</a>
-                                            </li>
-                                            <li id="menu-item-83"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-                                                <a title="Management" href="../courses/management/">Management</a>
-                                            </li>
-                                            <li id="menu-item-84"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="Computer Programme" href="../courses/computer-programme/">Computer Programme</a>
-                                            </li>
-                                            <li id="menu-item-86"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="Examination Procedure" href="../courses/examination-procedure/">Examination Procedure</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-65"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-                                            title="Gallery" href="../gallery/" class="hvr-underline-from-left1"
-                                            data-scroll="" data-options="easing: easeOutQuart">Gallery</a></li>
-                                    <li id="menu-item-66"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-                                            title="Contact" href="../contact/" class="hvr-underline-from-left1"
-                                            data-scroll="" data-options="easing: easeOutQuart">Contact Us</a></li>
-                                    <li id="menu-item-69"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-                                            title="Enrollment" href="../enrollment/" class="hvr-underline-from-left1"
-                                            data-scroll="" data-options="easing: easeOutQuart">Enrollment</a></li>
-                                    <li id="menu-item-68"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-                                            title="Results" href="../results/" class="hvr-underline-from-left1"
-                                            data-scroll="" data-options="easing: easeOutQuart">Results</a></li>
-                                    <li id="menu-item-85"
-                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
-                                        <a title="Affiliation" href="../QA&Dubai-Accreditation/" data-toggle="dropdown1"
-                                            class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
-                                            data-options="easing: easeOutQuart">Affiliation</a>
-                                        <ul role="menu" style="left: -150px;width: 350px;" class="sub-menu">
-                                            <li id="menu-item-90"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-                                                <a title="QA & Dubai-Accreditation" href="../QA&Dubai-Accreditation/">QA &
-                                                    Dubai-Accreditation</a>
-                                            </li>
-                                            <li id="menu-item-87"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-                                                <a title="Joint Accreditation Services" href="../Joint-Accreditation-Services/">Joint Accreditation
-                                                    Services</a>
-                                            </li>
-                                            <li id="menu-item-88"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="International Accreditation Form" href="../International-Accreditation-Form/">International Accreditation
-                                                    Form</a>
-                                            </li>
-                                            <li id="menu-item-93"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="Elite Norsk Akreditering" href="../Elite&Norsk-Akreditering/">Elite Norsk Akreditering</a>
-                                            </li>
-                                            <li id="menu-item-89"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="National Council for accreditation and Assessment" href="../National-Council-for-Accreditation-and-Assessment/">National Council for Accreditation and Assessment</a>
-                                            </li>
-                                            <li id="menu-item-92"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="National Council of Distance Education" href="../National-Council-of-Distance-Education/">National Council of Distance Education</a>
-                                            </li>
-                                            <li id="menu-item-91"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                                <a title="National Council of Technical Education" href="../National-Council of-Technical-Education/">National Council of Technical Education</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li id="menu-item-70"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-                                            title="Apply Now" href="../signup/" class="hvr-underline-from-left1"
-                                            data-scroll="" data-options="easing: easeOutQuart">Apply Now</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
+						<!-- Menu -->
+						<nav class="navbar float-right">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+									data-target="#navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="collapse navbar-collapse" id="navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li id="menu-item-58"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58">
+										<a title="Home" href="../index.html" data-toggle="dropdown1"
+											class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+											data-options="easing: easeOutQuart">Home</a>
+									</li>
+									<li id="menu-item-79"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+										<a title="About" href="../about" data-toggle="dropdown1"
+											class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+											data-options="easing: easeOutQuart">About</a>
+										<ul role="menu" class="sub-menu">
+											<li id="menu-item-74"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+												<a title="Who We Are" href="../Who-We-Are">Who We Are</a>
+											</li>
+											<li id="menu-item-75"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+												<a title="Our Mission" href="../Our-Mission">Our Mission</a>
+											</li>
+											<li id="menu-item-71"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="Our Vision" href="../Our-Vision">Our Vision</a>
+											</li>
+											<li id="menu-item-72"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="Chairman Message" href="../Chairman-Message">Chairman
+													Message</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-76"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+										<a title="Courses" href="../courses/technical/" data-toggle="dropdown1"
+											class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+											data-options="easing: easeOutQuart">Courses</a>
+										<ul role="menu" class="sub-menu">
+											<li id="menu-item-82"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+												<a title="Technical" href="../courses/technical/">Technical</a>
+											</li>
+											<li id="menu-item-83"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+												<a title="Management" href="../courses/management/">Management</a>
+											</li>
+											<li id="menu-item-84"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="Computer Programme"
+													href="../courses/computer-programme/">Computer Programme</a>
+											</li>
+											<li id="menu-item-86"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="Examination Procedure"
+													href="../courses/examination-procedure/">Examination Procedure</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-65"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Gallery" href="../gallery/" class="hvr-underline-from-left1"
+											data-scroll="" data-options="easing: easeOutQuart">Gallery</a></li>
+									<li id="menu-item-66"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Contact" href="../contact/" class="hvr-underline-from-left1"
+											data-scroll="" data-options="easing: easeOutQuart">Contact Us</a></li>
+									<li id="menu-item-69"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Enrollment" href="../enrollment/" class="hvr-underline-from-left1"
+											data-scroll="" data-options="easing: easeOutQuart">Enrollment</a></li>
+									<li id="menu-item-68"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Results" href="../results/" class="hvr-underline-from-left1"
+											data-scroll="" data-options="easing: easeOutQuart">Results</a></li>
+									<li id="menu-item-85"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-79 dropdown dropdown-holder">
+										<a title="Affiliation" href="../QA&Dubai-Accreditation/" data-toggle="dropdown1"
+											class="hvr-underline-from-left1" aria-expanded="false" data-scroll=""
+											data-options="easing: easeOutQuart">Affiliation</a>
+										<ul role="menu" style="left: -150px;width: 350px;" class="sub-menu">
+											<li id="menu-item-90"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
+												<a title="QA & Dubai-Accreditation" href="../QA&Dubai-Accreditation/">QA
+													&
+													Dubai-Accreditation</a>
+											</li>
+											<li id="menu-item-87"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
+												<a title="Joint Accreditation Services"
+													href="../Joint-Accreditation-Services/">Joint Accreditation
+													Services</a>
+											</li>
+											<li id="menu-item-88"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="International Accreditation Form"
+													href="../International-Accreditation-Form/">International
+													Accreditation
+													Form</a>
+											</li>
+											<li id="menu-item-93"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="Elite Norsk Akreditering"
+													href="../Elite&Norsk-Akreditering/">Elite Norsk Akreditering</a>
+											</li>
+											<li id="menu-item-89"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="National Council for accreditation and Assessment"
+													href="../National-Council-for-Accreditation-and-Assessment/">National
+													Council for Accreditation and Assessment</a>
+											</li>
+											<li id="menu-item-92"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="National Council of Distance Education"
+													href="../National-Council-of-Distance-Education/">National Council
+													of Distance Education</a>
+											</li>
+											<li id="menu-item-91"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+												<a title="National Council of Technical Education"
+													href="../National-Council of-Technical-Education/">National Council
+													of Technical Education</a>
+											</li>
+										</ul>
+									</li>
+									<li id="menu-item-70"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Apply Now" id="apply" href="../signup/"
+											class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Apply Now</a></li>
+
+									<script>
+										function checkEmail() {
+											if (localStorage.getItem('email') != null) {
+												let applyBtn = document.getElementById('apply');
+												applyBtn.innerText = "Sign Out";
+												applyBtn.href = "#";
+												applyBtn.addEventListener("click", () => {
+													localStorage.removeItem('email');
+													alertMessage("Logging out...");
+													setTimeout(() => {
+														location.href = "../signup";
+													}, 1500);
+												})
+											}
+										}
+										checkEmail();
+									</script>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 
 
 		<div class="inner-page-banner" style="background-image:url(images/1-2.jpg);">
@@ -989,7 +1031,7 @@
 				<div class="container" bis_skin_checked="1">
 					<div class="row" style="background-color: #D6D6D6;padding-bottom: 20px;" bis_skin_checked="1">
 
-						<div id="ContentPlaceHolder1_pnladmissionform" bis_skin_checked="1">
+						<div id="pnladmissionform" bis_skin_checked="1">
 
 							<div class="col-md-12 text-center" style="padding: 15px;" bis_skin_checked="1">
 								<br>
@@ -998,19 +1040,19 @@
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<div class="col-md-8" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>STUDENT NAME :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtstudentname" type="text" value=""
-											maxlength="90" id="ContentPlaceHolder1_txtstudentname"
+										<label>STUDENT NAME <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="studentname" type="text" value="" maxlength="90" id="studentname"
 											title="Enter Student Full Name" class="form-control"
 											placeholder="Student Name" autocomplete="off">
 									</div>
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>GENDER :</label>
-										<select name="ctl00$ContentPlaceHolder1$ddlgender"
-											id="ContentPlaceHolder1_ddlgender" title="Select You Gender"
-											class="form-control">
+										<label>GENDER <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<select name="ctl00$ContentPlaceHolder1$gender" id="gender"
+											title="Select You Gender" class="form-control">
 											<option selected="selected" value="Select Gender">Select Gender</option>
 											<option value="1">Male</option>
 											<option value="2">Female</option>
@@ -1025,11 +1067,11 @@
 
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>COURSE :</label>
-										<select name="ctl00$ContentPlaceHolder1$ddlcourse"
-											onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlcourse\',\'\')', 0)"
-											id="ContentPlaceHolder1_ddlcourse" title="Seelct Course"
-											class="form-control">
+										<label>COURSE <span
+												style="color: rgb(255, 106, 106);font-size: 15px;visibility: hidden;"></span></label>
+										<select style="font-weight: 100;" name="ctl00$ContentPlaceHolder1$course"
+											onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$course\',\'\')', 0)"
+											id="course" title="Select Course" class="form-control">
 											<option value="Select Course">Select Course</option>
 											<option value="1"> Bachelor in Engineering (BE)</option>
 											<option value="12">ADBM</option>
@@ -1053,16 +1095,15 @@
 											<option value="19">MBA.</option>
 											<option value="7">Post Graduate Diploma in Computer Application </option>
 											<option value="13">Post Graduate Diploma in Management (PGDM)</option>
-
 										</select>
 									</div>
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>SPECIALIZATION :</label>
-										<select name="ctl00$ContentPlaceHolder1$ddlSPECIALIZATION"
-											id="ContentPlaceHolder1_ddlSPECIALIZATION" title="Select Specialization"
-											class="form-control">
+										<label>SPECIALIZATION <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<select name="ctl00$ContentPlaceHolder1$SPECIALIZATION" id="specialization"
+											title="Select Specialization" class="form-control">
 											<option value="Select Specialization">Select Specialization</option>
 											<option value="9">Automobile</option>
 											<option value="10">Chemical</option>
@@ -1081,11 +1122,11 @@
 
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>CATEGORY :</label>
-										<select name="ctl00$ContentPlaceHolder1$ddlcategory"
-											id="ContentPlaceHolder1_ddlcategory" title="Seelct Category"
-											class="form-control">
-											<option value="Select Category">Select Category</option>
+										<label>CATEGORY <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<select name="ctl00$ContentPlaceHolder1$category" id="category"
+											title="Seelct Category" class="form-control">
+											<option value="0">Select Category</option>
 											<option value="1">General</option>
 											<option value="2">OBC</option>
 											<option value="3">SC</option>
@@ -1099,25 +1140,27 @@
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>FATHER'S NAME :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtfather" type="text" value=""
-											maxlength="90" id="ContentPlaceHolder1_txtfather" title="Enter Father Name"
-											class="form-control" placeholder="Father Name" autocomplete="off">
+										<label>FATHER'S NAME <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="father" type="text" value="" maxlength="90" id="father"
+											title="Enter Father Name" class="form-control" placeholder="Father Name"
+											autocomplete="off">
 									</div>
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>MOTHER'S NAME :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtmother" type="text" value=""
-											maxlength="90" id="ContentPlaceHolder1_txtmother" title="Enter Mother Name"
-											class="form-control" placeholder="Mother Name" autocomplete="off">
+										<label>MOTHER'S NAME <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="mother" type="text" value="" maxlength="90" id="mother"
+											title="Enter Mother Name" class="form-control" placeholder="Mother Name"
+											autocomplete="off">
 									</div>
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>Date Of Birth :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtdob" type="date" value=""
-											maxlength="10" id="ContentPlaceHolder1_txtdob"
+										<label>Date Of Birth <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="dob" type="date" value="" maxlength="10" id="dob"
 											title="Enter Your Date Of Birth" class="form-control"
 											placeholder="dd/MM/yyyy" autocomplete="off">
 									</div>
@@ -1126,18 +1169,18 @@
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>ADDRESS :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtaddress" type="text" value=""
-											maxlength="90" id="ContentPlaceHolder1_txtaddress"
+										<label>ADDRESS <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="address" type="text" value="" maxlength="90" id="address"
 											title="Enter Your Permanent Address" class="form-control"
 											placeholder="Permanent Address" autocomplete="off">
 									</div>
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>PHONE :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtphone" type="text" value=""
-											maxlength="10" id="ContentPlaceHolder1_txtphone"
+										<label>PHONE <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="phone" type="text" value="" maxlength="10" id="phone"
 											title="Enter 10 Digit Mobile No" class="form-control"
 											placeholder="eg. 9856848756" onkeypress="return isNumberKey(event)"
 											autocomplete="off">
@@ -1145,11 +1188,11 @@
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>EMAIL :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtemail" type="text" value=""
-											maxlength="100" id="ContentPlaceHolder1_txtemail"
-											title="Enter Valid Email ID" class="form-control" placeholder="Email ID"
-											autocomplete="off">
+										<label>EMAIL <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="email" type="text" value="" maxlength="100" id="email"
+											title="Enter Valid Email ID" disabled class="form-control"
+											placeholder="Email ID" autocomplete="off">
 									</div>
 								</div>
 							</div>
@@ -1157,10 +1200,10 @@
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>COUNTRY :</label>
-										<select name="ctl00$ContentPlaceHolder1$ddlcountry"
-											id="ContentPlaceHolder1_ddlcountry" title="Select Country"
-											class="form-control">
+										<label>COUNTRY <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<select name="ctl00$ContentPlaceHolder1$country" id="country"
+											title="Select Country" class="form-control">
 											<option value="Please Select Country">Please Select Country</option>
 											<option value="India">India</option>
 											<option value="Other">Other</option>
@@ -1170,30 +1213,46 @@
 								</div>
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>STATE :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtstate" type="text" value=""
-											maxlength="70" id="ContentPlaceHolder1_txtstate" title="Enter State"
-											class="form-control" placeholder="State" autocomplete="off">
+										<label>STATE <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="state" type="text" value="" maxlength="70" id="state"
+											title="Enter State" class="form-control" placeholder="State"
+											autocomplete="off">
 									</div>
 								</div>
 
 								<div class="col-md-4" bis_skin_checked="1">
 									<div class="form-control1" bis_skin_checked="1">
-										<label>CITY :</label>
-										<input name="ctl00$ContentPlaceHolder1$txtcity" type="text" value=""
-											maxlength="70" id="ContentPlaceHolder1_txtcity" title="Enter City"
-											class="form-control" placeholder="City" autocomplete="off">
+										<label>CITY <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<input name="city" type="text" value="" maxlength="70" id="city"
+											title="Enter City" class="form-control" placeholder="City"
+											autocomplete="off">
+									</div>
+								</div>
+								<div style="margin-top: 22px;" class="col-md-4" bis_skin_checked="1">
+									<div class="form-control1" bis_skin_checked="1">
+										<label>Examination Option <span
+												style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+										<select name="ctl00$ContentPlaceHolder1$category" id="examination"
+											title="Select Category" class="form-control">
+											<option value="0">Select Category</option>
+											<option value="Class Room System">Class Room System</option>
+											<option value="Online Test">Online Test</option>
+											<option value="Exam from Home">Exam from Home</option>
+										</select>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<fieldset class="scheduler-border custom-down">
-									<legend style="padding-left: 15px;padding-top: 20px;" class="scheduler-border">Previous Qualification</legend>
+									<legend style="padding-left: 15px;padding-top: 20px;" class="scheduler-border">
+										Previous Qualification</legend>
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>SCHOOL / COLLEGE 10TH :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt10th" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txt10th"
+											<label>SCHOOL / COLLEGE 10TH <span
+													style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+											<input name="10th" type="text" value="" maxlength="90" id="10th"
 												title="Enter Your 10Th School Name" class="form-control"
 												placeholder="eg. xyz school" autocomplete="off">
 										</div>
@@ -1201,100 +1260,91 @@
 
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>BOARD/YEAR :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt10board" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txt10board"
+											<label>BOARD/YEAR <span
+													style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+											<input name="10board" type="text" value="" maxlength="90" id="10board"
 												title="Enter Your Board And Pass Year " class="form-control"
-												placeholder="eg. up,2004" autocomplete="off">
+												placeholder="eg. 2004" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>PERCENTAGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt10result" type="text" value=""
-												maxlength="2" id="ContentPlaceHolder1_txt10result" class="form-control"
-												placeholder="eg. 68" onkeypress="return isNumberKey(event)"
-												autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>DEPLOMA/OTHER - COLLEGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtdeploma" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txtdeploma"
-												title="Enter Your College Name" placeholder="eg. xyz College"
-												class="form-control" autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>YEAR OF PASSING :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtdeplomayear" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txtdeplomayear"
-												title="Enter Your Pass Year " placeholder="eg. 2009"
-												class="form-control" autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>PERCENTAGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtdeplomaper" type="text" value=""
-												maxlength="2" id="ContentPlaceHolder1_txtdeplomaper"
+											<label>PERCENTAGE <span
+													style="color: rgb(255, 106, 106);font-size: 15px;">&nbsp;*</span></label>
+											<input name="10result" type="text" value="" maxlength="2" id="10result"
 												class="form-control" placeholder="eg. 68"
 												onkeypress="return isNumberKey(event)" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>SCHOOL / COLLEGE 12TH :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt12th" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txt12th"
-												title="Enter Your 12Th School Name" class="form-control"
-												placeholder="eg. xyz school" autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>BOARD/YEAR :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt12board" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txt12board"
-												title="Enter Your Board And Pass Year " class="form-control"
-												placeholder="eg. up,2006" autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>PERCENTAGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txt12result" type="text" value=""
-												maxlength="2" id="ContentPlaceHolder1_txt12result" class="form-control"
-												placeholder="eg. 68" onkeypress="return isNumberKey(event)"
-												autocomplete="off">
-										</div>
-									</div>
-									<div class="col-md-4" bis_skin_checked="1">
-										<div class="form-control1" bis_skin_checked="1">
-											<label>GRADUATION - SCHOOL / COLLEGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtGRADUATION" type="text" value=""
-												maxlength="90" id="ContentPlaceHolder1_txtGRADUATION"
+											<label>DIPLOMA/OTHER - COLLEGE</label>
+											<input name="deploma" type="text" value="" maxlength="90" id="diploma"
 												title="Enter Your College Name" placeholder="eg. xyz College"
 												class="form-control" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>YEAR OF PASSING :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtGRADUATIONPassingyear" type="text"
-												maxlength="90" id="ContentPlaceHolder1_txtGRADUATIONPassingyear"
-												title="Enter Your Pass Year " placeholder="eg. 2009"
+											<label>YEAR OF PASSING</label>
+											<input name="diplomayear" type="text" value="" maxlength="90"
+												id="diplomayear" title="Enter Your Pass Year " placeholder="eg. 2009"
 												class="form-control" autocomplete="off">
 										</div>
 									</div>
 									<div class="col-md-4" bis_skin_checked="1">
 										<div class="form-control1" bis_skin_checked="1">
-											<label>PERCENTAGE :</label>
-											<input name="ctl00$ContentPlaceHolder1$txtGRADUATIONresult" type="text"
-												value="" maxlength="2" id="ContentPlaceHolder1_txtGRADUATIONresult"
+											<label>PERCENTAGE</label>
+											<input name="diplomaper" type="text" value="" maxlength="2" id="diplomaper"
 												class="form-control" placeholder="eg. 68"
+												onkeypress="return isNumberKey(event)" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>SCHOOL / COLLEGE 12TH</label>
+											<input name="12th" type="text" value="" maxlength="90" id="12th"
+												title="Enter Your 12Th School Name" class="form-control"
+												placeholder="eg. xyz school" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>BOARD/YEAR</label>
+											<input name="12board" type="text" value="" maxlength="90" id="12board"
+												title="Enter Your Board And Pass Year " class="form-control"
+												placeholder="eg. 2006" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>PERCENTAGE</label>
+											<input name="12result" type="text" value="" maxlength="2" id="12result"
+												class="form-control" placeholder="eg. 68"
+												onkeypress="return isNumberKey(event)" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>GRADUATION - SCHOOL / COLLEGE</label>
+											<input name="GRADUATION" type="text" value="" maxlength="90" id="GRADUATION"
+												title="Enter Your College Name" placeholder="eg. xyz College"
+												class="form-control" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>YEAR OF PASSING</label>
+											<input name="GRADUATIONPassingyear" type="text" maxlength="90"
+												id="GRADUATIONPassingyear" title="Enter Your Pass Year "
+												placeholder="eg. 2009" class="form-control" autocomplete="off">
+										</div>
+									</div>
+									<div class="col-md-4" bis_skin_checked="1">
+										<div class="form-control1" bis_skin_checked="1">
+											<label>PERCENTAGE</label>
+											<input name="GRADUATIONresult" type="text" value="" maxlength="2"
+												id="GRADUATIONresult" class="form-control" placeholder="eg. 68"
 												onkeypress="return isNumberKey(event)" autocomplete="off">
 										</div>
 									</div>
@@ -1303,84 +1353,24 @@
 							<div class="col-md-12" style="margin: 10px;" bis_skin_checked="1">
 								<div class="col-md-3" bis_skin_checked="1">
 									<input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Submit"
-										onclick="" id="ContentPlaceHolder1_btnsave" class="commonBtn"
-										style="width:200px;" autocomplete="off">
+										id="btnsave" class="commonBtn" style="width:200px;" autocomplete="off">
 								</div>
 							</div>
+
+							<script>
+								function checkEmail() {
+									if (localStorage.getItem('email') != null) {
+										let commonBtn = document.getElementById('commonBtn');
+										commonBtn.value = "Update";
+										commonBtn.addEventListener("click", () => {
+											updateData();
+										})
+									}
+								}
+								checkEmail();
+							</script>
 
 						</div>
-
-						<div id="ContentPlaceHolder1_pnluploadDocument" style="display:none;" bis_skin_checked="1">
-							<div class="col-md-12 text-center" style="padding: 15px;" bis_skin_checked="1">
-								<br>
-								<h3>Upload Documents</h3>
-							</div>
-							<div class="col-md-10 col-md-offset-1" bis_skin_checked="1">
-								<div class="col-md-3" bis_skin_checked="1">
-									<div class="form-control1" bis_skin_checked="1">
-
-										<select name="ctl00$ContentPlaceHolder1$ddldocuments"
-											id="ContentPlaceHolder1_ddldocuments" class="form-control">
-											<option value="Select Document Type">Select Document Type</option>
-											<option value="1">10Th Certificate</option>
-											<option value="3">Applicant Photo</option>
-											<option value="4">Identi-proof</option>
-											<option value="5">Address Proof</option>
-											<option value="6">Degree</option>
-											<option value="7">Applicant Signature</option>
-											<option value="8">Diploma</option>
-
-										</select>
-									</div>
-								</div>
-								<div class="col-md-5" bis_skin_checked="1">
-									<div class="input-group image-preview" data-original-title="" title=""
-										bis_skin_checked="1">
-										<input type="text" class="form-control image-preview-filename"
-											disabled="disabled" autocomplete="off">
-										<!-- don't give a name === doesn't send on POST/GET -->
-										<span class="input-group-btn">
-											<!-- image-preview-clear button -->
-											<button type="button" class="btn btn-default image-preview-clear"
-												style="display: none;">
-												<span class="glyphicon glyphicon-remove"></span>Clear
-											</button>
-											<!-- image-preview-input -->
-
-											<div class="btn btn-default image-preview-input" bis_skin_checked="1">
-												<span class="glyphicon glyphicon-folder-open"></span>
-												<span class="image-preview-input-title">Browse</span>
-												<input name="ctl00$ContentPlaceHolder1$fileuplod" type="file"
-													id="ContentPlaceHolder1_fileuplod" accept="image/jpeg" tabindex="8"
-													autocomplete="off">
-												<!-- rename it -->
-											</div>
-										</span>
-									</div>
-								</div>
-								<div class="col-md-3 text-center   " bis_skin_checked="1">
-									<input type="submit" name="ctl00$ContentPlaceHolder1$btnUpload" value="Upload"
-										id="ContentPlaceHolder1_btnUpload" class="commonBtn" style="width:200px;"
-										autocomplete="off">
-								</div>
-								<br>
-								<div class="col-md-12" bis_skin_checked="1">
-									<div class="table-responsive" bis_skin_checked="1">
-										<br>
-
-										<table id="myTable" class="table table-striped table-bordered" cellspacing="0"
-											width="100%">
-
-
-										</table>
-									</div>
-									<div class="col-md-offset-9 col-md-3 text-center " bis_skin_checked="1">
-
-									</div>
-								</div>
-							</div>
-						</div>
-
 
 					</div>
 				</div>
@@ -1388,7 +1378,523 @@
 		</div>
 
 		<div class="clearfix"></div>
+		<style>
+			#snackbar {
+				visibility: hidden;
+				/* Hidden by default. Visible on click */
+				min-width: 250px;
+				/* Set a default minimum width */
+				margin-left: -125px;
+				/* Divide value of min-width by 2 */
+				background-color: #333;
+				/* Black background color */
+				color: #fff;
+				/* White text color */
+				text-align: center;
+				/* Centered text */
+				border-radius: 2px;
+				/* Rounded borders */
+				padding: 16px;
+				/* Padding */
+				position: fixed;
+				/* Sit on top of the screen */
+				z-index: 1;
+				/* Add a z-index if needed */
+				left: 50%;
+				/* Center the snackbar */
+				bottom: 30px;
+				/* 30px from the bottom */
+			}
 
+			/* Show the snackbar when clicking on a button (class added with JavaScript) */
+			#snackbar.show {
+				visibility: visible;
+				/* Show the snackbar */
+				/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+	  However, delay the fade out process for 2.5 seconds */
+				-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+				animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			}
+
+			/* Animations to fade the snackbar in and out */
+			@-webkit-keyframes fadein {
+				from {
+					bottom: 0;
+					opacity: 0;
+				}
+
+				to {
+					bottom: 30px;
+					opacity: 1;
+				}
+			}
+
+			@keyframes fadein {
+				from {
+					bottom: 0;
+					opacity: 0;
+				}
+
+				to {
+					bottom: 30px;
+					opacity: 1;
+				}
+			}
+
+			@-webkit-keyframes fadeout {
+				from {
+					bottom: 30px;
+					opacity: 1;
+				}
+
+				to {
+					bottom: 0;
+					opacity: 0;
+				}
+			}
+
+			@keyframes fadeout {
+				from {
+					bottom: 30px;
+					opacity: 1;
+				}
+
+				to {
+					bottom: 0;
+					opacity: 0;
+				}
+			}
+		</style>
+
+		<div id="snackbar"></div>
+
+		<script>
+			function alertMessage(innerText) {
+				// Get the snackbar DIV
+				var x = document.getElementById("snackbar");
+				x.innerHTML = innerText;
+
+				// Add the "show" class to DIV
+				x.className = "show";
+
+				// After 3 seconds, remove the show class from DIV
+				setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+			}
+
+			document.getElementById("email").value = localStorage.getItem("email");
+
+			function checkData() {
+				if (localStorage.getItem("admissionForm") != undefined && localStorage.getItem("admissionForm") != null && localStorage.getItem("admissionForm") != "") {
+					const email = localStorage.getItem("email");
+					const url = `http://localhost:5000/getAdmission/${email}`;
+					let student = document.getElementById("studentname");
+					let gender = document.getElementById("gender");
+					let course = document.getElementById("course");
+					let specialization = document.getElementById("specialization");
+					let category = document.getElementById("category");
+					let father = document.getElementById("father");
+					let mother = document.getElementById("mother");
+					let dob = document.getElementById("dob");
+					let address = document.getElementById("address");
+					let phone = document.getElementById("phone");
+					let country = document.getElementById("country");
+					let examination = document.getElementById("examination");
+					let state = document.getElementById("state");
+					let city = document.getElementById("city");
+					let tenth = document.getElementById("10th");
+					let tenthBoard = document.getElementById("10board");
+					let tenthResult = document.getElementById("10result");
+					let diploma = document.getElementById("diploma");
+					let diplomayear = document.getElementById("diplomayear");
+					let diplomaper = document.getElementById("diplomaper");
+					let twelth = document.getElementById("12th");
+					let twelthBoard = document.getElementById("12board");
+					let twelthResult = document.getElementById("12result");
+					let graduation = document.getElementById("GRADUATION");
+					let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
+					let graduationResult = document.getElementById("GRADUATIONresult");
+
+					fetch(url)
+						.then(response => {
+							if (!response.ok) {
+								throw new Error(`HTTP error! Status: ${response.status}`);
+							}
+							return response.json();
+						})
+						.then(data => {
+							console.log("Data received successfully:", data);
+							setTimeout(() => {
+								alertMessage("Autofilled previous response.");
+							}, 1000);
+							data = data.data;
+							student.value = data.Name;
+							gender.value = data.Gender;
+							course.value = data.Course;
+							specialization.value = data.Specialization;
+							category.value = data.Category;
+							father.value = data.Fname;
+							mother.value = data.Mname;
+							dob.value = data.Dob;
+							address.value = data.Address;
+							phone.value = data.Phone;
+							country.value = data.Country;
+							examination.value = data.Examination;
+							state.value = data.State;
+							city.value = data.City;
+
+							// Educational details
+							tenth.value = data.Mschool;
+							tenthBoard.value = data.Myear;
+							tenthResult.value = data.Mpercent;
+
+							// Handle "Not Filled" for Diploma
+							diploma.value = data.Dcollege !== "Not Filled" ? data.Dcollege : '';
+							diplomayear.value = data.Dyear !== "Not Filled" ? data.Dyear : '';
+							diplomaper.value = data.Dpercent !== "Not Filled" ? data.Dpercent : '';
+
+							// Handle "Not Filled" for 12th
+							twelth.value = data.Hschool !== "Not Filled" ? data.Hschool : '';
+							twelthBoard.value = data.Hyear !== "Not Filled" ? data.Hyear : '';
+							twelthResult.value = data.Hpercent !== "Not Filled" ? data.Hpercent : '';
+
+							// Handle "Not Filled" for Graduation
+							graduation.value = data.Gcollege !== "Not Filled" ? data.Gcollege : '';
+							graduationPassingYear.value = data.Gyear !== "Not Filled" ? data.Gyear : '';
+							graduationResult.value = data.Gpercent !== "Not Filled" ? data.Gpercent : '';
+						})
+						.catch(error => {
+							console.error("Error fetching data:", error);
+							alertMessage("Error fetching data. Refreshing!!");
+							location.reload();
+						});
+				}
+			}
+
+			checkData();
+
+			async function sendData() {
+				let student = document.getElementById("studentname");
+				let gender = document.getElementById("gender");
+				let course = document.getElementById("course");
+				let specialization = document.getElementById("specialization");
+				let category = document.getElementById("category");
+				let father = document.getElementById("father");
+				let mother = document.getElementById("mother");
+				let dob = document.getElementById("dob");
+				let address = document.getElementById("address");
+				let phone = document.getElementById("phone");
+				let email = document.getElementById("email");
+				let country = document.getElementById("country");
+				let examination = document.getElementById("examination");
+				let state = document.getElementById("state");
+				let city = document.getElementById("city");
+				let tenth = document.getElementById("10th");
+				let tenthBoard = document.getElementById("10board");
+				let tenthResult = document.getElementById("10result");
+				let diploma = document.getElementById("diploma");
+				let diplomayear = document.getElementById("diplomayear");
+				let diplomaper = document.getElementById("diplomaper");
+				let twelth = document.getElementById("12th");
+				let twelthBoard = document.getElementById("12board");
+				let twelthResult = document.getElementById("12result");
+				let graduation = document.getElementById("GRADUATION");
+				let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
+				let graduationResult = document.getElementById("GRADUATIONresult");
+
+				if (student.value == null || student.value == "" || !student.value) {
+					alertMessage("Please enter a Student Name");
+					student.focus();
+					return false;
+				} else if (gender.value == "Select Gender") {
+					alertMessage("Please select a Gender");
+					gender.focus();
+					return false;
+				} else if (course.value == "Select Course") {
+					alertMessage("Please select a Course");
+					course.focus();
+					return false;
+				} else if (specialization.value == "Select Specialization") {
+					alertMessage("Please select a Specialization");
+					specialization.focus();
+					return false;
+				} else if (category.value == "0") {
+					alertMessage("Please select a Category");
+					category.focus();
+					return false;
+				} else if (father.value == null || father.value == "" || !father.value) {
+					alertMessage("Please enter a Father's Name");
+					father.focus();
+					return false;
+				} else if (mother.value == null || mother.value == "" || !mother.value) {
+					alertMessage("Please enter a Mother's Name");
+					mother.focus();
+					return false;
+				} else if (dob.value == null || dob.value == "" || !dob.value) {
+					alertMessage("Please enter a Date of Birth");
+					dob.focus();
+					return false;
+				} else if (address.value == null || address.value == "" || !address.value) {
+					alertMessage("Please enter an Address");
+					address.focus();
+					return false;
+				} else if (phone.value == null || phone.value == "" || !phone.value) {
+					alertMessage("Please enter a Phone Number");
+					phone.focus();
+					return false;
+				} else if (email.value == null || email.value == "" || !email.value) {
+					alertMessage("Please enter an Email");
+					email.focus();
+					return false;
+				} else if (country.value == "Please Select Country") {
+					alertMessage("Please select a Country");
+					country.focus();
+					return false;
+				} else if (examination.value == "0") { // Note: This ID is repeated; you may want to correct it
+					alertMessage("Please select an Examination Option");
+					examination.focus();
+					return false;
+				} else if (state.value == null || state.value == "" || !state.value) {
+					alertMessage("Please enter a State");
+					state.focus();
+					return false;
+				} else if (city.value == null || city.value == "" || !city.value) {
+					alertMessage("Please enter a City");
+					city.focus();
+					return false;
+				} else if (tenth.value == null || tenth.value == "" || !tenth.value) {
+					alertMessage("Please enter 10th School Name");
+					tenth.focus();
+					return false;
+				} else if (tenthBoard.value == null || tenthBoard.value == "" || !tenthBoard.value) {
+					alertMessage("Please enter 10th Board and Pass Year");
+					tenthBoard.focus();
+					return false;
+				} else if (tenthResult.value == null || tenthResult.value == "" || !tenthResult.value) {
+					alertMessage("Please enter 10th Percentage");
+					tenthResult.focus();
+					return false;
+				}
+
+				let data = {
+					Name: student.value,
+					Gender: gender.value,
+					Course: course.value,
+					Specialization: specialization.value,
+					Category: category.value,
+					Fname: father.value,
+					Mname: mother.value,
+					Dob: dob.value,
+					Address: address.value,
+					Phone: phone.value,
+					Email: email.value,
+					Country: country.value,
+					Examination: examination.value,
+					State: state.value,
+					City: city.value,
+					Mschool: tenth.value,
+					Myear: tenthBoard.value,
+					Mpercent: tenthResult.value,
+					Dcollege: diploma.value || "Not Filled",
+					Dyear: diplomayear.value || "Not Filled",
+					Dpercent: diplomaper.value || "Not Filled",
+					Hschool: twelth.value || "Not Filled",
+					Hyear: twelthBoard.value || "Not Filled",
+					Hpercent: twelthResult.value || "Not Filled",
+					Gcollege: graduation.value || "Not Filled",
+					Gyear: graduationPassingYear.value || "Not Filled",
+					Gpercent: graduationResult.value || "Not Filled"
+				};
+
+				try {
+					// Make a POST request using fetch
+					const response = await fetch('http://localhost:5000/newAdmission', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(data)
+					});
+
+					// Check if the request was successful (status code 200-299)
+					if (response.ok) {
+						alertMessage('Data sent successfully!');
+						localStorage.setItem("admissionForm", "filled");
+						setTimeout(() => {
+							location.href = "../uploaddocs";
+						}, 1000);
+					} else {
+						alertMessage('Failed to send data. Please try again.');
+					}
+				} catch (error) {
+					console.error('Error:', error);
+					alertMessage('An error occurred. Please try again later.');
+				}
+			}
+
+			document.getElementById("btnsave").addEventListener("click", () => {
+				sendData();
+			});
+
+
+			async function updateData() {
+				let student = document.getElementById("studentname");
+				let gender = document.getElementById("gender");
+				let course = document.getElementById("course");
+				let specialization = document.getElementById("specialization");
+				let category = document.getElementById("category");
+				let father = document.getElementById("father");
+				let mother = document.getElementById("mother");
+				let dob = document.getElementById("dob");
+				let address = document.getElementById("address");
+				let phone = document.getElementById("phone");
+				let email = document.getElementById("email");
+				let country = document.getElementById("country");
+				let examination = document.getElementById("examination");
+				let state = document.getElementById("state");
+				let city = document.getElementById("city");
+				let tenth = document.getElementById("10th");
+				let tenthBoard = document.getElementById("10board");
+				let tenthResult = document.getElementById("10result");
+				let diploma = document.getElementById("diploma");
+				let diplomayear = document.getElementById("diplomayear");
+				let diplomaper = document.getElementById("diplomaper");
+				let twelth = document.getElementById("12th");
+				let twelthBoard = document.getElementById("12board");
+				let twelthResult = document.getElementById("12result");
+				let graduation = document.getElementById("GRADUATION");
+				let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
+				let graduationResult = document.getElementById("GRADUATIONresult");
+
+				if (student.value == null || student.value == "" || !student.value) {
+					alertMessage("Please enter a Student Name");
+					student.focus();
+					return false;
+				} else if (gender.value == "Select Gender") {
+					alertMessage("Please select a Gender");
+					gender.focus();
+					return false;
+				} else if (course.value == "Select Course") {
+					alertMessage("Please select a Course");
+					course.focus();
+					return false;
+				} else if (specialization.value == "Select Specialization") {
+					alertMessage("Please select a Specialization");
+					specialization.focus();
+					return false;
+				} else if (category.value == "0") {
+					alertMessage("Please select a Category");
+					category.focus();
+					return false;
+				} else if (father.value == null || father.value == "" || !father.value) {
+					alertMessage("Please enter a Father's Name");
+					father.focus();
+					return false;
+				} else if (mother.value == null || mother.value == "" || !mother.value) {
+					alertMessage("Please enter a Mother's Name");
+					mother.focus();
+					return false;
+				} else if (dob.value == null || dob.value == "" || !dob.value) {
+					alertMessage("Please enter a Date of Birth");
+					dob.focus();
+					return false;
+				} else if (address.value == null || address.value == "" || !address.value) {
+					alertMessage("Please enter an Address");
+					address.focus();
+					return false;
+				} else if (phone.value == null || phone.value == "" || !phone.value) {
+					alertMessage("Please enter a Phone Number");
+					phone.focus();
+					return false;
+				} else if (email.value == null || email.value == "" || !email.value) {
+					alertMessage("Please enter an Email");
+					email.focus();
+					return false;
+				} else if (country.value == "Please Select Country") {
+					alertMessage("Please select a Country");
+					country.focus();
+					return false;
+				} else if (examination.value == "0") { // Note: This ID is repeated; you may want to correct it
+					alertMessage("Please select an Examination Option");
+					examination.focus();
+					return false;
+				} else if (state.value == null || state.value == "" || !state.value) {
+					alertMessage("Please enter a State");
+					state.focus();
+					return false;
+				} else if (city.value == null || city.value == "" || !city.value) {
+					alertMessage("Please enter a City");
+					city.focus();
+					return false;
+				} else if (tenth.value == null || tenth.value == "" || !tenth.value) {
+					alertMessage("Please enter 10th School Name");
+					tenth.focus();
+					return false;
+				} else if (tenthBoard.value == null || tenthBoard.value == "" || !tenthBoard.value) {
+					alertMessage("Please enter 10th Board and Pass Year");
+					tenthBoard.focus();
+					return false;
+				} else if (tenthResult.value == null || tenthResult.value == "" || !tenthResult.value) {
+					alertMessage("Please enter 10th Percentage");
+					tenthResult.focus();
+					return false;
+				}
+
+				let data = {
+					Name: student.value,
+					Gender: gender.value,
+					Course: course.value,
+					Specialization: specialization.value,
+					Category: category.value,
+					Fname: father.value,
+					Mname: mother.value,
+					Dob: dob.value,
+					Address: address.value,
+					Phone: phone.value,
+					Email: email.value,
+					Country: country.value,
+					Examination: examination.value,
+					State: state.value,
+					City: city.value,
+					Mschool: tenth.value,
+					Myear: tenthBoard.value,
+					Mpercent: tenthResult.value,
+					Dcollege: diploma.value || "Not Filled",
+					Dyear: diplomayear.value || "Not Filled",
+					Dpercent: diplomaper.value || "Not Filled",
+					Hschool: twelth.value || "Not Filled",
+					Hyear: twelthBoard.value || "Not Filled",
+					Hpercent: twelthResult.value || "Not Filled",
+					Gcollege: graduation.value || "Not Filled",
+					Gyear: graduationPassingYear.value || "Not Filled",
+					Gpercent: graduationResult.value || "Not Filled"
+				};
+
+				try {
+					// Make a POST request using fetch
+					const response = await fetch('http://localhost:5000/newAdmission', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(data)
+					});
+
+					// Check if the request was successful (status code 200-299)
+					if (response.ok) {
+						alertMessage('Data sent successfully!');
+						localStorage.setItem("admissionForm", "filled");
+						setTimeout(() => {
+							location.href = "../uploaddocs";
+						}, 1000);
+					} else {
+						alertMessage('Failed to send data. Please try again.');
+					}
+				} catch (error) {
+					console.error('Error:', error);
+					alertMessage('An error occurred. Please try again later.');
+				}
+			}
+		</script>
 
 		<!-- Footer ______________________________ -->
 		<footer>
@@ -1714,8 +2220,6 @@
 									value="">
 							</p>
 
-
-
 							<div class="tutor-login-rememeber-wrap">
 								<p class="login-remember">
 									<label>
@@ -1725,7 +2229,6 @@
 								<a href="#dashboard/retrieve-password">
 									Forgot Password? </a>
 							</div>
-
 
 							<p class="login-submit">
 								<input type="submit" name="wp-submit" id="wp-submit" class="tutor-button"

@@ -55,6 +55,10 @@ const admission = new mongoose.Schema({
         type: String,
         required: true,
     },
+    City: {
+        type: String,
+        required: true,
+    },
     Mschool: {
         type: String,
         required: true,
@@ -100,6 +104,14 @@ const admission = new mongoose.Schema({
         required: true,
     },
     Gpercent: {
+        type: String,
+        required: true,
+    },
+    Docs: {
+        type: String,
+        required: true,
+    },
+    Examination: {
         type: String,
         required: true,
     },

@@ -17,7 +17,12 @@ const auth = new mongoose.Schema({
     Enrollment: {
         type: String,
         required: true
-    }
+    },
+    Status: {
+        type: String,
+        required: true,
+        default: '0'
+    },
 });
 
 const Auth = mongoose.model("Auth", auth);
