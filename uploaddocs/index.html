@@ -1957,6 +1957,35 @@
 	<div id="snackbar"></div>
 
 	<script>
+		// Function to check if the local storage has file data and autofill the input fields
+		function autofillAllFileData() {
+			const storedFileData = localStorage.getItem('uploadedFileURLs');
+			if (storedFileData) {
+				const uploadedFileURLs = JSON.parse(storedFileData);
+
+				// Iterate through each file key and autofill the corresponding input field
+				Object.keys(uploadedFileURLs).forEach(function (fileKey, index) {
+					const inputId = 'image-preview' + (index + 1); // Adjust this if needed
+					const fileData = uploadedFileURLs[fileKey];
+
+					if (fileData && fileData.url && fileData.name) {
+						// Autofill the input field with the file name
+						console.log('Autofilling for', inputId, 'with', fileData.name);
+						document.getElementById(inputId).value = fileData.name;
+					}
+				});
+			}
+		}
+
+		// Call the function for each file input on page load
+		window.addEventListener('load', function () {
+			console.log('Page loaded. Attempting to autofill...');
+			autofillAllFileData();
+		});
+	</script>
+
+
+	<script>
 		function alertMessage(innerText) {
 			// Get the snackbar DIV
 			var x = document.getElementById("snackbar");
@@ -1971,16 +2000,18 @@
 
 		// Load the uploadedFileURLs object from local storage (if it exists)
 		const storedFileURLs = localStorage.getItem('uploadedFileURLs');
-		const uploadedFileURLs = storedFileURLs ? JSON.parse(storedFileURLs) : {
-			"tenthCertificate": null,
-			"twelthCertificate": null,
-			"applicantPhoto": null,
-			"identityProof": null,
-			"addressProof": null,
-			"degree": null,
-			"applicantSignature": null,
-			"diploma": null
-		};
+		const uploadedFileURLs = storedFileURLs
+			? JSON.parse(storedFileURLs)
+			: {
+				"tenthCertificate": { url: null, name: null },
+				"twelthCertificate": { url: null, name: null },
+				"applicantPhoto": { url: null, name: null },
+				"identityProof": { url: null, name: null },
+				"addressProof": { url: null, name: null },
+				"degree": { url: null, name: null },
+				"applicantSignature": { url: null, name: null },
+				"diploma": { url: null, name: null },
+			};
 
 		function saveToLocalStorage() {
 			// Save the updated uploadedFileURLs object to local storage
@@ -2009,11 +2040,12 @@
 						const data = await response.json();
 						console.log(data);
 
-						// Assuming the URL is available in the data object
+						// Assuming the URL and name are available in the data object
 						const fileURL = data.storageUrl;
+						const fileName = file.name;
 
-						// Store the URL in the object with the corresponding key
-						uploadedFileURLs[fileKey] = fileURL;
+						// Store the URL and name in the object with the corresponding key
+						uploadedFileURLs[fileKey] = { url: fileURL, name: fileName };
 
 						// Save the updated object to local storage
 						saveToLocalStorage();
@@ -2048,33 +2080,20 @@
 			document.getElementById(uploadBtnId).addEventListener('click', createFileUploadFunction(contentPlaceHolderId, uploadBtnId, fileKey));
 		}
 
+
 		async function uploadDocuments() {
-			if (
-				JSON.parse(storedFileURLs).tenthCertificate === undefined ||
-				JSON.parse(storedFileURLs).tenthCertificate === null ||
-				JSON.parse(storedFileURLs).tenthCertificate === ""
-			) {
+			const uploadedFileURLs = JSON.parse(localStorage.getItem('uploadedFileURLs'));
+
+			if (!uploadedFileURLs.tenthCertificate.url || !uploadedFileURLs.tenthCertificate.name) {
 				alertMessage("Please upload 10th certificate.");
 				return;
-			} else if (
-				JSON.parse(storedFileURLs).twelthCertificate === undefined ||
-				JSON.parse(storedFileURLs).twelthCertificate === null ||
-				JSON.parse(storedFileURLs).twelthCertificate === ""
-			) {
+			} else if (!uploadedFileURLs.twelthCertificate.url || !uploadedFileURLs.twelthCertificate.name) {
 				alertMessage("Please upload 12th certificate.");
 				return;
-			} else if (
-				JSON.parse(storedFileURLs).applicantPhoto === undefined ||
-				JSON.parse(storedFileURLs).applicantPhoto === null ||
-				JSON.parse(storedFileURLs).applicantPhoto === ""
-			) {
+			} else if (!uploadedFileURLs.applicantPhoto.url || !uploadedFileURLs.applicantPhoto.name) {
 				alertMessage("Please upload your image.");
 				return;
-			} else if (
-				JSON.parse(storedFileURLs).identityProof === undefined ||
-				JSON.parse(storedFileURLs).identityProof === null ||
-				JSON.parse(storedFileURLs).identityProof === ""
-			) {
+			} else if (!uploadedFileURLs.identityProof.url || !uploadedFileURLs.identityProof.name) {
 				alertMessage("Please upload Identity Proof.");
 				return;
 			}
@@ -2096,7 +2115,7 @@
 				if (response.ok) {
 					alertMessage("Data sent successfully!");
 					setTimeout(() => {
-						location.href = "../uploaddocs";
+						location.href = "../successForm";
 					}, 1000);
 				} else {
 					alertMessage("Failed to send data. Please try again.");
