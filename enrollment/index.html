@@ -747,7 +747,8 @@
 <body
 	class="page-template page-template-tpl-default-elementor page-template-tpl-default-elementor-php page page-id-27 theme-edutech woocommerce-js tribe-js menu-layer elementor-default elementor-kit-9 elementor-page elementor-page-27">
 	<div class="main-page-wrapper">
-		<!-- Header _________________________________ -->
+		<link rel='stylesheet'
+			href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 		<header class="inner-header">
 
 			<style>
@@ -883,21 +884,21 @@
 										<ul role="menu" class="sub-menu">
 											<li id="menu-item-82"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-												<a title="Technical" href="../courses/technical/">Technical</a>
+												<a title="Technical" href="../courses/technical/">> Technical</a>
 											</li>
 											<li id="menu-item-83"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-												<a title="Management" href="../courses/management/">Management</a>
+												<a title="Management" href="../courses/management/">> Management</a>
 											</li>
 											<li id="menu-item-84"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-												<a title="Computer Programme"
-													href="../courses/computer-programme/">Computer Programme</a>
+												<a title="Computer Programme" href="../courses/computer-programme/">>
+													Computer Programme</a>
 											</li>
 											<li id="menu-item-86"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
 												<a title="Examination Procedure"
-													href="../courses/examination-procedure/">Examination Procedure</a>
+													href="../courses/examination-procedure/">> Examination Procedure</a>
 											</li>
 										</ul>
 									</li>
@@ -967,10 +968,61 @@
 											</li>
 										</ul>
 									</li>
+									<style>
+										#menu-item-578 {
+											display: none;
+										}
+										@media (max-width: 991px) {
+											#menu-item-578 {
+												display: unset;
+											}
+										}
+									</style>
+									<li id="menu-item-578"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Document Verification" href="../results/"
+											class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Document Verification</a></li>
+									<style>
+										#menu-item-70 {
+											display: relative;
+											top: 29px;
+										}
+
+										@media (max-width: 991px) {
+											#menu-item-70 {
+												display: unset;
+												top: unset;
+											}
+										}
+									</style>
 									<li id="menu-item-70"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-											title="Apply Now" href="../signup/" class="hvr-underline-from-left1"
-											data-scroll="" data-options="easing: easeOutQuart">Apply Now</a></li>
+											title="Apply Now" style="background: white;
+											color: black;
+											line-height: 40px;
+											padding: 0 20px;" href="../signup/" id="apply" class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Apply Now</a></li>
+									<script>
+										function checkEmail() {
+											if (localStorage.getItem('email') != null) {
+												let applyBtn = document.getElementById('apply');
+												applyBtn.innerText = "Sign Out";
+												applyBtn.href = "#";
+												applyBtn.addEventListener("click", () => {
+													localStorage.removeItem('email');
+													if (localStorage.getItem('uploadedFileURLs')) {
+														localStorage.removeItem('uploadedFileURLs');
+													}
+													alertMessage("Logging out...");
+													setTimeout(() => {
+														location.href = "../signup";
+													}, 1500);
+												})
+											}
+										}
+										checkEmail();
+									</script>
 								</ul>
 							</div>
 						</nav>

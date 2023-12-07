@@ -756,6 +756,8 @@
 
 	<div class="main-page-wrapper">
 		<!-- Header _________________________________ -->
+		<link rel='stylesheet'
+			href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 		<header class="inner-header">
 
 			<style>
@@ -891,21 +893,21 @@
 										<ul role="menu" class="sub-menu">
 											<li id="menu-item-82"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-												<a title="Technical" href="../courses/technical/">Technical</a>
+												<a title="Technical" href="../courses/technical/">> Technical</a>
 											</li>
 											<li id="menu-item-83"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-												<a title="Management" href="../courses/management/">Management</a>
+												<a title="Management" href="../courses/management/">> Management</a>
 											</li>
 											<li id="menu-item-84"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-												<a title="Computer Programme"
-													href="../courses/computer-programme/">Computer Programme</a>
+												<a title="Computer Programme" href="../courses/computer-programme/">>
+													Computer Programme</a>
 											</li>
 											<li id="menu-item-86"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
 												<a title="Examination Procedure"
-													href="../courses/examination-procedure/">Examination Procedure</a>
+													href="../courses/examination-procedure/">> Examination Procedure</a>
 											</li>
 										</ul>
 									</li>
@@ -975,12 +977,41 @@
 											</li>
 										</ul>
 									</li>
+									<style>
+										#menu-item-578 {
+											display: none;
+										}
+										@media (max-width: 991px) {
+											#menu-item-578 {
+												display: unset;
+											}
+										}
+									</style>
+									<li id="menu-item-578"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Document Verification" href="../results/"
+											class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Document Verification</a></li>
+									<style>
+										#menu-item-70 {
+											display: relative;
+											top: 29px;
+										}
+
+										@media (max-width: 991px) {
+											#menu-item-70 {
+												display: unset;
+												top: unset;
+											}
+										}
+									</style>
 									<li id="menu-item-70"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-											title="Apply Now" id="apply" href="../signup/"
-											class="hvr-underline-from-left1" data-scroll=""
+											title="Apply Now" style="background: white;
+											color: black;
+											line-height: 40px;
+											padding: 0 20px;" href="../signup/" id="apply" class="hvr-underline-from-left1" data-scroll=""
 											data-options="easing: easeOutQuart">Apply Now</a></li>
-
 									<script>
 										function checkEmail() {
 											if (localStorage.getItem('email') != null) {
@@ -989,6 +1020,9 @@
 												applyBtn.href = "#";
 												applyBtn.addEventListener("click", () => {
 													localStorage.removeItem('email');
+													if (localStorage.getItem('uploadedFileURLs')) {
+														localStorage.removeItem('uploadedFileURLs');
+													}
 													alertMessage("Logging out...");
 													setTimeout(() => {
 														location.href = "../signup";
@@ -1356,7 +1390,7 @@
 										id="btnsave" class="commonBtn" style="width:200px;" autocomplete="off">
 								</div>
 								<div class="col-md-3" bis_skin_checked="1">
-									<input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Re-Upload Docs"
+									<input type="submit" name="ctl00$ContentPlaceHolder1$btnsave" value="Upload Docs"
 										onclick="forward()" class="commonBtn" style="width:200px;" autocomplete="off">
 								</div>
 							</div>
@@ -1379,7 +1413,7 @@
 							</script>
 
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -1492,90 +1526,93 @@
 			document.getElementById("email").value = localStorage.getItem("email");
 
 			function checkData() {
-				if (localStorage.getItem("admissionForm") != undefined && localStorage.getItem("admissionForm") != null && localStorage.getItem("admissionForm") != "") {
-					const email = localStorage.getItem("email");
-					const url = `https://api-aimt.vercel.app/getAdmission/${email}`;
-					let student = document.getElementById("studentname");
-					let gender = document.getElementById("gender");
-					let course = document.getElementById("course");
-					let specialization = document.getElementById("specialization");
-					let category = document.getElementById("category");
-					let father = document.getElementById("father");
-					let mother = document.getElementById("mother");
-					let dob = document.getElementById("dob");
-					let address = document.getElementById("address");
-					let phone = document.getElementById("phone");
-					let country = document.getElementById("country");
-					let examination = document.getElementById("examination");
-					let state = document.getElementById("state");
-					let city = document.getElementById("city");
-					let tenth = document.getElementById("10th");
-					let tenthBoard = document.getElementById("10board");
-					let tenthResult = document.getElementById("10result");
-					let diploma = document.getElementById("diploma");
-					let diplomayear = document.getElementById("diplomayear");
-					let diplomaper = document.getElementById("diplomaper");
-					let twelth = document.getElementById("12th");
-					let twelthBoard = document.getElementById("12board");
-					let twelthResult = document.getElementById("12result");
-					let graduation = document.getElementById("GRADUATION");
-					let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
-					let graduationResult = document.getElementById("GRADUATIONresult");
+				const email = localStorage.getItem("email");
+				const url = `https://api-aimt.vercel.app/getAdmission/${email}`;
+				let student = document.getElementById("studentname");
+				let gender = document.getElementById("gender");
+				let course = document.getElementById("course");
+				let specialization = document.getElementById("specialization");
+				let category = document.getElementById("category");
+				let father = document.getElementById("father");
+				let mother = document.getElementById("mother");
+				let dob = document.getElementById("dob");
+				let address = document.getElementById("address");
+				let phone = document.getElementById("phone");
+				let country = document.getElementById("country");
+				let examination = document.getElementById("examination");
+				let state = document.getElementById("state");
+				let city = document.getElementById("city");
+				let tenth = document.getElementById("10th");
+				let tenthBoard = document.getElementById("10board");
+				let tenthResult = document.getElementById("10result");
+				let diploma = document.getElementById("diploma");
+				let diplomayear = document.getElementById("diplomayear");
+				let diplomaper = document.getElementById("diplomaper");
+				let twelth = document.getElementById("12th");
+				let twelthBoard = document.getElementById("12board");
+				let twelthResult = document.getElementById("12result");
+				let graduation = document.getElementById("GRADUATION");
+				let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
+				let graduationResult = document.getElementById("GRADUATIONresult");
 
-					fetch(url)
-						.then(response => {
-							if (!response.ok) {
-								throw new Error(`HTTP error! Status: ${response.status}`);
-							}
-							return response.json();
+				fetch(url)
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(`HTTP error! Status: ${response.status}`);
+						}
+						return response.json();
+					})
+					.then(data => {
+						let commonBtn = document.getElementById('btnsave');
+						commonBtn.value = "Update";
+						commonBtn.addEventListener("click", () => {
+							updateData();
 						})
-						.then(data => {
-							console.log("Data received successfully:", data);
-							setTimeout(() => {
-								alertMessage("Autofilled previous response.");
-							}, 1000);
-							data = data.data;
-							student.value = data.Name;
-							gender.value = data.Gender;
-							course.value = data.Course;
-							specialization.value = data.Specialization;
-							category.value = data.Category;
-							father.value = data.Fname;
-							mother.value = data.Mname;
-							dob.value = data.Dob;
-							address.value = data.Address;
-							phone.value = data.Phone;
-							country.value = data.Country;
-							examination.value = data.Examination;
-							state.value = data.State;
-							city.value = data.City;
 
-							// Educational details
-							tenth.value = data.Mschool;
-							tenthBoard.value = data.Myear;
-							tenthResult.value = data.Mpercent;
+						console.log("Data received successfully:", data);
+						setTimeout(() => {
+							alertMessage("Autofilled previous response.");
+						}, 1000);
+						data = data.data;
+						student.value = data.Name;
+						gender.value = data.Gender;
+						course.value = data.Course;
+						specialization.value = data.Specialization;
+						category.value = data.Category;
+						father.value = data.Fname;
+						mother.value = data.Mname;
+						dob.value = data.Dob;
+						address.value = data.Address;
+						phone.value = data.Phone;
+						country.value = data.Country;
+						examination.value = data.Examination;
+						state.value = data.State;
+						city.value = data.City;
 
-							// Handle "Not Filled" for Diploma
-							diploma.value = data.Dcollege !== "Not Filled" ? data.Dcollege : '';
-							diplomayear.value = data.Dyear !== "Not Filled" ? data.Dyear : '';
-							diplomaper.value = data.Dpercent !== "Not Filled" ? data.Dpercent : '';
+						// Educational details
+						tenth.value = data.Mschool;
+						tenthBoard.value = data.Myear;
+						tenthResult.value = data.Mpercent;
 
-							// Handle "Not Filled" for 12th
-							twelth.value = data.Hschool !== "Not Filled" ? data.Hschool : '';
-							twelthBoard.value = data.Hyear !== "Not Filled" ? data.Hyear : '';
-							twelthResult.value = data.Hpercent !== "Not Filled" ? data.Hpercent : '';
+						// Handle "Not Filled" for Diploma
+						diploma.value = data.Dcollege !== "Not Filled" ? data.Dcollege : '';
+						diplomayear.value = data.Dyear !== "Not Filled" ? data.Dyear : '';
+						diplomaper.value = data.Dpercent !== "Not Filled" ? data.Dpercent : '';
 
-							// Handle "Not Filled" for Graduation
-							graduation.value = data.Gcollege !== "Not Filled" ? data.Gcollege : '';
-							graduationPassingYear.value = data.Gyear !== "Not Filled" ? data.Gyear : '';
-							graduationResult.value = data.Gpercent !== "Not Filled" ? data.Gpercent : '';
-						})
-						.catch(error => {
-							console.error("Error fetching data:", error);
-							alertMessage("Error fetching data. Refreshing!!");
-							location.reload();
-						});
-				}
+						// Handle "Not Filled" for 12th
+						twelth.value = data.Hschool !== "Not Filled" ? data.Hschool : '';
+						twelthBoard.value = data.Hyear !== "Not Filled" ? data.Hyear : '';
+						twelthResult.value = data.Hpercent !== "Not Filled" ? data.Hpercent : '';
+
+						// Handle "Not Filled" for Graduation
+						graduation.value = data.Gcollege !== "Not Filled" ? data.Gcollege : '';
+						graduationPassingYear.value = data.Gyear !== "Not Filled" ? data.Gyear : '';
+						graduationResult.value = data.Gpercent !== "Not Filled" ? data.Gpercent : '';
+					})
+					.catch(error => {
+						console.error("Error fetching data:", error);
+						alertMessage("Error fetching data. Refreshing!!");
+					});
 			}
 
 			checkData();
@@ -1726,7 +1763,6 @@
 					// Check if the request was successful (status code 200-299)
 					if (response.ok) {
 						alertMessage('Data sent successfully!');
-						localStorage.setItem("admissionForm", "filled");
 						setTimeout(() => {
 							location.href = "../uploaddocs";
 						}, 1000);
@@ -1890,7 +1926,6 @@
 					// Check if the request was successful (status code 200-299)
 					if (response.ok) {
 						alertMessage('Data sent successfully!');
-						localStorage.setItem("admissionForm", "filled");
 						setTimeout(() => {
 							location.href = "../uploaddocs";
 						}, 1000);

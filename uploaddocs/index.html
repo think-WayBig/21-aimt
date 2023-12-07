@@ -757,7 +757,8 @@
 	</script>
 
 	<div class="main-page-wrapper">
-		<!-- Header _________________________________ -->
+		<link rel='stylesheet'
+			href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 		<header class="inner-header">
 
 			<style>
@@ -893,21 +894,21 @@
 										<ul role="menu" class="sub-menu">
 											<li id="menu-item-82"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74">
-												<a title="Technical" href="../courses/technical/">Technical</a>
+												<a title="Technical" href="../courses/technical/">> Technical</a>
 											</li>
 											<li id="menu-item-83"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75">
-												<a title="Management" href="../courses/management/">Management</a>
+												<a title="Management" href="../courses/management/">> Management</a>
 											</li>
 											<li id="menu-item-84"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-												<a title="Computer Programme"
-													href="../courses/computer-programme/">Computer Programme</a>
+												<a title="Computer Programme" href="../courses/computer-programme/">>
+													Computer Programme</a>
 											</li>
 											<li id="menu-item-86"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
 												<a title="Examination Procedure"
-													href="../courses/examination-procedure/">Examination Procedure</a>
+													href="../courses/examination-procedure/">> Examination Procedure</a>
 											</li>
 										</ul>
 									</li>
@@ -977,10 +978,61 @@
 											</li>
 										</ul>
 									</li>
+									<style>
+										#menu-item-578 {
+											display: none;
+										}
+										@media (max-width: 991px) {
+											#menu-item-578 {
+												display: unset;
+											}
+										}
+									</style>
+									<li id="menu-item-578"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
+											title="Document Verification" href="../results/"
+											class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Document Verification</a></li>
+									<style>
+										#menu-item-70 {
+											display: relative;
+											top: 29px;
+										}
+
+										@media (max-width: 991px) {
+											#menu-item-70 {
+												display: unset;
+												top: unset;
+											}
+										}
+									</style>
 									<li id="menu-item-70"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-											title="Apply Now" href="../signup/" class="hvr-underline-from-left1"
-											data-scroll="" data-options="easing: easeOutQuart">Apply Now</a></li>
+											title="Apply Now" style="background: white;
+											color: black;
+											line-height: 40px;
+											padding: 0 20px;" href="../signup/" id="apply" class="hvr-underline-from-left1" data-scroll=""
+											data-options="easing: easeOutQuart">Apply Now</a></li>
+									<script>
+										function checkEmail() {
+											if (localStorage.getItem('email') != null) {
+												let applyBtn = document.getElementById('apply');
+												applyBtn.innerText = "Sign Out";
+												applyBtn.href = "#";
+												applyBtn.addEventListener("click", () => {
+													localStorage.removeItem('email');
+													if (localStorage.getItem('uploadedFileURLs')) {
+														localStorage.removeItem('uploadedFileURLs');
+													}
+													alertMessage("Logging out...");
+													setTimeout(() => {
+														location.href = "../signup";
+													}, 1500);
+												})
+											}
+										}
+										checkEmail();
+									</script>
 								</ul>
 							</div>
 						</nav>
@@ -1043,8 +1095,7 @@
 							<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
 								<div style="margin-top: 10px;" class="col-md-3">
 									<div class="form-control1">
-										<h3 style="text-align: left;">10Th Certificate <span
-												style="color: red;font-size: 30px;">*</span></h3>
+										<h3 style="text-align: left;">10Th Certificate</h3>
 										<!-- <select name="ctl00$ContentPlaceHolder1$ddldocuments"
 											id="ContentPlaceHolder1_ddldocuments" class="form-control">
 											<option value="1"></option>
@@ -1131,8 +1182,7 @@
 								style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;">
 								<div style="margin-top: 10px;" class="col-md-3">
 									<div class="form-control1">
-										<h3 style="text-align: left;">12Th Certificate <span
-												style="color: red;font-size: 30px;">*</span></h3>
+										<h3 style="text-align: left;">12Th Certificate</h3>
 									</div>
 								</div>
 								<div style="margin-top: 10px;" class="col-md-5">
@@ -1194,8 +1244,7 @@
 								style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;">
 								<div style="margin-top: 10px;" class="col-md-3">
 									<div class="form-control1">
-										<h3 style="text-align: left;">Applicant Photo <span
-												style="color: red;font-size: 30px;">*</span></h3>
+										<h3 style="text-align: left;">Applicant Photo</h3>
 									</div>
 								</div>
 								<div style="margin-top: 10px;" class="col-md-5">
@@ -1256,8 +1305,7 @@
 								style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 10px;">
 								<div style="margin-top: 10px;" class="col-md-3">
 									<div class="form-control1">
-										<h3 style="text-align: left;">Identity-proof <span
-												style="color: red;font-size: 30px;">*</span></h3>
+										<h3 style="text-align: left;">Identity-proof</h3>
 									</div>
 								</div>
 								<div style="margin-top: 10px;" class="col-md-5">
@@ -2083,20 +2131,6 @@
 
 		async function uploadDocuments() {
 			const uploadedFileURLs = JSON.parse(localStorage.getItem('uploadedFileURLs'));
-
-			if (!uploadedFileURLs.tenthCertificate.url || !uploadedFileURLs.tenthCertificate.name) {
-				alertMessage("Please upload 10th certificate.");
-				return;
-			} else if (!uploadedFileURLs.twelthCertificate.url || !uploadedFileURLs.twelthCertificate.name) {
-				alertMessage("Please upload 12th certificate.");
-				return;
-			} else if (!uploadedFileURLs.applicantPhoto.url || !uploadedFileURLs.applicantPhoto.name) {
-				alertMessage("Please upload your image.");
-				return;
-			} else if (!uploadedFileURLs.identityProof.url || !uploadedFileURLs.identityProof.name) {
-				alertMessage("Please upload Identity Proof.");
-				return;
-			}
 
 			try {
 				let mail = localStorage.getItem("email");
