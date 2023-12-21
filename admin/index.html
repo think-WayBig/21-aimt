@@ -484,6 +484,7 @@
             // Create a button and add it to the cell
             var approveButton = document.createElement("button");
             approveButton.innerHTML = "Approve";
+            approveButton.setAttribute("onclick", "sendEnrollment('" + email + "', '" + enrollmentNumber + "')");
             cellApproveButton.appendChild(approveButton);
         }
 
@@ -497,6 +498,28 @@
             });
         }
         loadData();
+
+        async function sendEnrollment(mail, enrollment) {
+            try {
+                let res = await fetch("http://localhost:5000/sendEnrollment", {
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Mail: mail,
+                        Enrollment: enrollment
+                    })
+                });
+
+                let responseJSON = await res.json();
+                console.log(responseJSON);
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred while processing your request. Please try again later.");
+            }
+        }
 
         function logout() {
             localStorage.removeItem('WIMTAdminId');

@@ -422,7 +422,7 @@ app.post('/sendEnrollment', async (req, res) => {
         to: req.body.Mail,
         from: 'verification@aimt.net.in',
         subject: 'You are successfully enrolled!!',
-        html: ``
+        html: `Message ${req.body.Enrollment}`
     };
 
     try {

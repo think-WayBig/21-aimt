@@ -1106,7 +1106,7 @@
 							Specialization:
 						</td>
 						<td>
-							<span id="Specialization"></span>
+							<span id="specialization"></span>
 						</td>
 					</tr>
 				</tbody>
@@ -1434,14 +1434,10 @@
 								<input type="text" placeholder="Username or Email Address" name="log" id="user_login"
 									class="input" value="">
 							</p>
-
 							<p class="login-password">
 								<input type="password" placeholder="Password" name="pwd" id="user_pass" class="input"
 									value="">
 							</p>
-
-
-
 							<div class="tutor-login-rememeber-wrap">
 								<p class="login-remember">
 									<label>
@@ -1451,8 +1447,6 @@
 								<a href="#dashboard/retrieve-password">
 									Forgot Password? </a>
 							</div>
-
-
 							<p class="login-submit">
 								<input type="submit" name="wp-submit" id="wp-submit" class="tutor-button"
 									value="Log In">
@@ -1601,6 +1595,31 @@ However, delay the fade out process for 2.5 seconds */
 			// After 3 seconds, remove the show class from DIV
 			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 		}
+
+		async function getData() {
+			let url = new URL(window.location.href);
+			let params = new URLSearchParams(url.search);
+
+			// Check if the "mail" parameter exists before trying to retrieve its value
+			if (params.has("mail")) {
+				let api = `https://api-aimt.vercel.app/getAdmission/${params.get("mail")}`;
+				let response = await fetch(api);
+				let data = await response.json();
+				console.log(data);
+				document.getElementById("enrollment").innerHTML = params.get("enrollment");
+				document.getElementById("studentname").innerHTML = data.data.Name;
+				document.getElementById("dob").innerHTML = data.data.Dob;
+				document.getElementById("status").innerHTML = "Active";
+				document.getElementById("course").innerHTML = data.data.Course;
+				document.getElementById("specialization").innerHTML = data.data.Specialization;
+			} else {
+				location.href = '../enrollment';
+				console.log("The 'mail' parameter is not present in the URL.");
+			}
+		}
+
+		getData();
+
 	</script>
 	<script type="text/javascript" src="js/wp-polyfill-inert.min.js" id="wp-polyfill-inert-js"></script>
 	<script type="text/javascript" src="js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>

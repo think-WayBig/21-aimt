@@ -1588,6 +1588,7 @@
 				let enrollData = user.Enrollment;
 				if (enrollData == enrollment.value) {
 					alertMessage("Success!!");
+					location.href = `../enrollment-display/?mail=${mail.value}&enrollment=${enrollment.value}`;
 				} else {
 					alertMessage("Invalid enrollment Number!");
 				}
