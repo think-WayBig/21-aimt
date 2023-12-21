@@ -501,7 +501,7 @@
 
         async function sendEnrollment(mail, enrollment) {
             try {
-                let res = await fetch("http://localhost:5000/sendEnrollment", {
+                let res = await fetch("https://api-aimt.vercel.app/sendEnrollment", {
                     method: "POST",
                     headers: {
                         'Accept': 'application/json, text/plain, */*',

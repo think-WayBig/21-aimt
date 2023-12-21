@@ -423,18 +423,18 @@ app.post('/sendEnrollment', async (req, res) => {
         from: 'verification@aimt.net.in',
         subject: 'You are successfully enrolled!!',
         html: `Dear Candidate,
-
+        <br><br>
         Congratulations and welcome to <b>Affinity Institute of Management and Technology!</b> We are thrilled to have you as a part of our esteemed institute and are excited about the educational journey that lies ahead.
-        
+        <br>
         Your enrollment is now complete, and we are pleased to provide you with your unique enrollment number: ${req.body.Enrollment}. This number will serve as your identification throughout your time with us.
-        
+        <br>
         To get started, please use the following link to log in and access your student portal: <a href='https://www.aimt.net.in/enrollment/'>https://www.aimt.net.in/enrollment/</a>. Here, you will find important resources, course materials, and information related to your program. Your engagement with the student portal is crucial for staying updated on announcements, schedules, and academic resources.
-        
+        <br>
         If you have any questions or encounter any issues during the onboarding process, our dedicated support team is here to assist you. Feel free to reach out at <a href="mailto:info@aimt.net.in">info@aimt.net.in</a>
-        
+        <br>
         Once again, welcome to Affinity Institute of Management and Technology! We look forward to supporting you in your academic journey and witnessing your success.
-        
-        Best regards,
+        <br><br>
+        Best regards,<br>
         Affinity Institute of Management and Technology`
     };
 
