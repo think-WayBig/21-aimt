@@ -1536,35 +1536,37 @@
 
 		document.getElementById("email").value = localStorage.getItem("email");
 
+		let student = document.getElementById("studentname");
+		let gender = document.getElementById("gender");
+		let course = document.getElementById("course");
+		let specialization = document.getElementById("specialization");
+		let category = document.getElementById("category");
+		let father = document.getElementById("father");
+		let mother = document.getElementById("mother");
+		let dob = document.getElementById("dob");
+		let address = document.getElementById("address");
+		let phone = document.getElementById("phone");
+		let email = document.getElementById("email");
+		let country = document.getElementById("country");
+		let examination = document.getElementById("examination");
+		let state = document.getElementById("state");
+		let city = document.getElementById("city");
+		let tenth = document.getElementById("10th");
+		let tenthBoard = document.getElementById("10board");
+		let tenthResult = document.getElementById("10result");
+		let diploma = document.getElementById("diploma");
+		let diplomayear = document.getElementById("diplomayear");
+		let diplomaper = document.getElementById("diplomaper");
+		let twelth = document.getElementById("12th");
+		let twelthBoard = document.getElementById("12board");
+		let twelthResult = document.getElementById("12result");
+		let graduation = document.getElementById("GRADUATION");
+		let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
+		let graduationResult = document.getElementById("GRADUATIONresult");
+
 		function checkData() {
-			const email = localStorage.getItem("email");
-			const url = `https://api-aimt.vercel.app/getAdmission/${email}`;
-			let student = document.getElementById("studentname");
-			let gender = document.getElementById("gender");
-			let course = document.getElementById("course");
-			let specialization = document.getElementById("specialization");
-			let category = document.getElementById("category");
-			let father = document.getElementById("father");
-			let mother = document.getElementById("mother");
-			let dob = document.getElementById("dob");
-			let address = document.getElementById("address");
-			let phone = document.getElementById("phone");
-			let country = document.getElementById("country");
-			let examination = document.getElementById("examination");
-			let state = document.getElementById("state");
-			let city = document.getElementById("city");
-			let tenth = document.getElementById("10th");
-			let tenthBoard = document.getElementById("10board");
-			let tenthResult = document.getElementById("10result");
-			let diploma = document.getElementById("diploma");
-			let diplomayear = document.getElementById("diplomayear");
-			let diplomaper = document.getElementById("diplomaper");
-			let twelth = document.getElementById("12th");
-			let twelthBoard = document.getElementById("12board");
-			let twelthResult = document.getElementById("12result");
-			let graduation = document.getElementById("GRADUATION");
-			let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
-			let graduationResult = document.getElementById("GRADUATIONresult");
+			const localMail = localStorage.getItem("email");
+			const url = `https://api-aimt.vercel.app/getAdmission/${localMail}`;
 
 			fetch(url)
 				.then(response => {
@@ -1629,34 +1631,6 @@
 		checkData();
 
 		async function sendData() {
-			let student = document.getElementById("studentname");
-			let gender = document.getElementById("gender");
-			let course = document.getElementById("course");
-			let specialization = document.getElementById("specialization");
-			let category = document.getElementById("category");
-			let father = document.getElementById("father");
-			let mother = document.getElementById("mother");
-			let dob = document.getElementById("dob");
-			let address = document.getElementById("address");
-			let phone = document.getElementById("phone");
-			let email = document.getElementById("email");
-			let country = document.getElementById("country");
-			let examination = document.getElementById("examination");
-			let state = document.getElementById("state");
-			let city = document.getElementById("city");
-			let tenth = document.getElementById("10th");
-			let tenthBoard = document.getElementById("10board");
-			let tenthResult = document.getElementById("10result");
-			let diploma = document.getElementById("diploma");
-			let diplomayear = document.getElementById("diplomayear");
-			let diplomaper = document.getElementById("diplomaper");
-			let twelth = document.getElementById("12th");
-			let twelthBoard = document.getElementById("12board");
-			let twelthResult = document.getElementById("12result");
-			let graduation = document.getElementById("GRADUATION");
-			let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
-			let graduationResult = document.getElementById("GRADUATIONresult");
-
 			if (student.value == null || student.value == "" || !student.value) {
 				alertMessage("Please enter a Student Name");
 				student.focus();
@@ -1792,34 +1766,6 @@
 
 
 		async function updateData() {
-			let student = document.getElementById("studentname");
-			let gender = document.getElementById("gender");
-			let course = document.getElementById("course");
-			let specialization = document.getElementById("specialization");
-			let category = document.getElementById("category");
-			let father = document.getElementById("father");
-			let mother = document.getElementById("mother");
-			let dob = document.getElementById("dob");
-			let address = document.getElementById("address");
-			let phone = document.getElementById("phone");
-			let email = document.getElementById("email");
-			let country = document.getElementById("country");
-			let examination = document.getElementById("examination");
-			let state = document.getElementById("state");
-			let city = document.getElementById("city");
-			let tenth = document.getElementById("10th");
-			let tenthBoard = document.getElementById("10board");
-			let tenthResult = document.getElementById("10result");
-			let diploma = document.getElementById("diploma");
-			let diplomayear = document.getElementById("diplomayear");
-			let diplomaper = document.getElementById("diplomaper");
-			let twelth = document.getElementById("12th");
-			let twelthBoard = document.getElementById("12board");
-			let twelthResult = document.getElementById("12result");
-			let graduation = document.getElementById("GRADUATION");
-			let graduationPassingYear = document.getElementById("GRADUATIONPassingyear");
-			let graduationResult = document.getElementById("GRADUATIONresult");
-
 			if (student.value == null || student.value == "" || !student.value) {
 				alertMessage("Please enter a Student Name");
 				student.focus();
